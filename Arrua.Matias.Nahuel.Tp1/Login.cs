@@ -2,9 +2,9 @@ using System.Runtime.InteropServices;
 
 namespace Arrua.Matias.Nahuel.Tp1
 {
-    public partial class Login : Form
+    public partial class frm_Login : Form
     {
-        public Login()
+        public frm_Login()
         {
             InitializeComponent();
         }
@@ -57,11 +57,22 @@ namespace Arrua.Matias.Nahuel.Tp1
         {
 
         }
-        
-        
 
+        private void btn_ingresar_Click(object sender, EventArgs e)
+        {
+            //TODO : 1 - Chequear contraseña
 
+            if (true)
+            {
+                this.Hide();
+            frm_Admin admin = new frm_Admin();
+                admin.Show();
+            }
+            else
+            {
+                //TODO : 2 - agregar mensaje de error pass/user mal
+            }
 
-
+        }
     }
 }

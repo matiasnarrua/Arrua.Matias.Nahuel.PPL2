@@ -90,7 +90,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>459, 50</value>
+    <value>459, 40</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
@@ -112,7 +112,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_Minimize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 12</value>
+    <value>397, 12</value>
   </data>
   <data name="btn_Minimize.Size" type="System.Drawing.Size, System.Drawing">
     <value>16, 16</value>
@@ -184,7 +184,7 @@
     <value>11</value>
   </data>
   <data name="btn_ingresar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Cambria, 12pt, style=Bold, Underline</value>
+    <value>Cambria, 12pt</value>
   </data>
   <data name="btn_ingresar.Location" type="System.Drawing.Point, System.Drawing">
     <value>164, 470</value>
@@ -340,7 +340,7 @@
     <value>5</value>
   </data>
   <data name="btn_PreAdmin.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Cambria, 12pt, style=Bold</value>
+    <value>Cambria, 12pt</value>
   </data>
   <data name="btn_PreAdmin.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 587</value>
@@ -367,7 +367,7 @@
     <value>3</value>
   </data>
   <data name="btn_PreProfesor.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Cambria, 12pt, style=Bold</value>
+    <value>Cambria, 12pt</value>
   </data>
   <data name="btn_PreProfesor.Location" type="System.Drawing.Point, System.Drawing">
     <value>183, 587</value>
@@ -394,7 +394,7 @@
     <value>2</value>
   </data>
   <data name="btn_PreAlumno.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Cambria, 12pt, style=Bold</value>
+    <value>Cambria, 12pt</value>
   </data>
   <data name="btn_PreAlumno.Location" type="System.Drawing.Point, System.Drawing">
     <value>308, 587</value>
@@ -466,7 +466,7 @@
     <value>Login</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Login</value>
+    <value>frm_Login</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
