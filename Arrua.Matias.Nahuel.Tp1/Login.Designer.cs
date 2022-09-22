@@ -33,6 +33,7 @@
             this.btn_Minimize = new System.Windows.Forms.PictureBox();
             this.btn_Close = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).BeginInit();
@@ -68,11 +69,18 @@
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Login
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -91,5 +99,6 @@
         private Panel panel2;
         private PictureBox btn_Minimize;
         private PictureBox btn_Close;
+        private Button button1;
     }
 }

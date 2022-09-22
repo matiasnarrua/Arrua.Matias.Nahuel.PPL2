@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Arrua.Matias.Nahuel.Tp1/1.0.0": {
+        "runtime": {
+          "Arrua.Matias.Nahuel.Tp1.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Arrua.Matias.Nahuel.Tp1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
