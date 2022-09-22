@@ -33,15 +33,16 @@
             this.btn_Minimize = new System.Windows.Forms.PictureBox();
             this.btn_Close = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_ingresar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_PreAdmin = new System.Windows.Forms.Button();
+            this.btn_PreProfesor = new System.Windows.Forms.Button();
+            this.btn_PreAlumno = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).BeginInit();
@@ -55,6 +56,7 @@
             this.panel1.Controls.Add(this.btn_Close);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // btn_Minimize
             // 
@@ -77,12 +79,14 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
-            // button1
+            // btn_ingresar
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.btn_ingresar, "btn_ingresar");
+            this.btn_ingresar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_ingresar.Name = "btn_ingresar";
+            this.btn_ingresar.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -97,11 +101,13 @@
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Name = "label1";
             // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Name = "label2";
             // 
             // pictureBox1
@@ -110,43 +116,56 @@
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
-            // button2
+            // btn_PreAdmin
             // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.btn_PreAdmin, "btn_PreAdmin");
+            this.btn_PreAdmin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_PreAdmin.Name = "btn_PreAdmin";
+            this.btn_PreAdmin.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_PreProfesor
             // 
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.btn_PreProfesor, "btn_PreProfesor");
+            this.btn_PreProfesor.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_PreProfesor.Name = "btn_PreProfesor";
+            this.btn_PreProfesor.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn_PreAlumno
             // 
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.btn_PreAlumno, "btn_PreAlumno");
+            this.btn_PreAlumno.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_PreAlumno.Name = "btn_PreAlumno";
+            this.btn_PreAlumno.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Name = "label3";
             // 
             // Login
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btn_PreAlumno);
+            this.Controls.Add(this.btn_PreProfesor);
+            this.Controls.Add(this.btn_PreAdmin);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_ingresar);
             this.Controls.Add(this.panel2);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Minimize)).EndInit();
@@ -163,14 +182,15 @@
         private Panel panel2;
         private PictureBox btn_Minimize;
         private PictureBox btn_Close;
-        private Button button1;
+        private Button btn_ingresar;
         private TextBox textBox1;
         private TextBox textBox2;
         private Label label1;
         private Label label2;
         private PictureBox pictureBox1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button btn_PreAdmin;
+        private Button btn_PreProfesor;
+        private Button btn_PreAlumno;
+        private Label label3;
     }
 }
