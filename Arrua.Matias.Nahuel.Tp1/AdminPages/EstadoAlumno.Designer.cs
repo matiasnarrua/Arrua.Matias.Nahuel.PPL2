@@ -1,6 +1,6 @@
 ﻿namespace Arrua.Matias.Nahuel.Tp1.AdminPages
 {
-    partial class frm_AltaProfesor
+    partial class frm_EstadoAlumno
     {
         /// <summary>
         /// Required designer variable.
@@ -36,13 +36,13 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(172, 9);
+            this.label1.Location = new System.Drawing.Point(120, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 37);
+            this.label1.Size = new System.Drawing.Size(277, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Alta Profesor";
+            this.label1.Text = "Estado del Alumno";
             // 
-            // frm_AltaProfesor
+            // frm_EstadoAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -50,8 +50,8 @@
             this.ClientSize = new System.Drawing.Size(532, 412);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frm_AltaProfesor";
-            this.Text = "AltaProfesor";
+            this.Name = "frm_EstadoAlumno";
+            this.Text = "EstadoAlumno";
             this.ResumeLayout(false);
             this.PerformLayout();
 

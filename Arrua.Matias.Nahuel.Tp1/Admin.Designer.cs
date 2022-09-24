@@ -34,15 +34,15 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btn_EstadoAlumno = new System.Windows.Forms.Button();
+            this.btn_AddMateria = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_AddProfesor = new System.Windows.Forms.Button();
+            this.btn_AddAlumno = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_AsignarProfesor = new System.Windows.Forms.Button();
             this.btn_AddAdmin = new System.Windows.Forms.Button();
             this.pnl_Contenedor = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -96,15 +96,15 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.btn_EstadoAlumno);
+            this.panel2.Controls.Add(this.btn_AddMateria);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.btn_AddProfesor);
+            this.panel2.Controls.Add(this.btn_AddAlumno);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btn_AsignarProfesor);
             this.panel2.Controls.Add(this.btn_AddAdmin);
             this.panel2.Location = new System.Drawing.Point(0, 40);
             this.panel2.Name = "panel2";
@@ -130,35 +130,37 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Admin";
             // 
-            // button6
+            // btn_EstadoAlumno
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Location = new System.Drawing.Point(6, 353);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(163, 28);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "Estado del alumno";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btn_EstadoAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.btn_EstadoAlumno.FlatAppearance.BorderSize = 0;
+            this.btn_EstadoAlumno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.btn_EstadoAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EstadoAlumno.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_EstadoAlumno.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_EstadoAlumno.Location = new System.Drawing.Point(6, 353);
+            this.btn_EstadoAlumno.Name = "btn_EstadoAlumno";
+            this.btn_EstadoAlumno.Size = new System.Drawing.Size(163, 28);
+            this.btn_EstadoAlumno.TabIndex = 9;
+            this.btn_EstadoAlumno.Text = "Estado del alumno";
+            this.btn_EstadoAlumno.UseVisualStyleBackColor = false;
+            this.btn_EstadoAlumno.Click += new System.EventHandler(this.btn_EstadoAlumno_Click);
             // 
-            // button5
+            // btn_AddMateria
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(6, 319);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(163, 28);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Crear materia";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btn_AddMateria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.btn_AddMateria.FlatAppearance.BorderSize = 0;
+            this.btn_AddMateria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.btn_AddMateria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddMateria.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_AddMateria.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_AddMateria.Location = new System.Drawing.Point(6, 319);
+            this.btn_AddMateria.Name = "btn_AddMateria";
+            this.btn_AddMateria.Size = new System.Drawing.Size(163, 28);
+            this.btn_AddMateria.TabIndex = 8;
+            this.btn_AddMateria.Text = "Crear materia";
+            this.btn_AddMateria.UseVisualStyleBackColor = false;
+            this.btn_AddMateria.Click += new System.EventHandler(this.btn_AddMateria_Click);
             // 
             // label2
             // 
@@ -171,44 +173,44 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Materias";
             // 
-            // button4
+            // btn_AddProfesor
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(6, 201);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(166, 28);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Profesor";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btn_AddProfesor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.btn_AddProfesor.FlatAppearance.BorderSize = 0;
+            this.btn_AddProfesor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.btn_AddProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddProfesor.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_AddProfesor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_AddProfesor.Location = new System.Drawing.Point(6, 201);
+            this.btn_AddProfesor.Name = "btn_AddProfesor";
+            this.btn_AddProfesor.Size = new System.Drawing.Size(166, 28);
+            this.btn_AddProfesor.TabIndex = 6;
+            this.btn_AddProfesor.Text = "Profesor";
+            this.btn_AddProfesor.UseVisualStyleBackColor = false;
+            this.btn_AddProfesor.Click += new System.EventHandler(this.btn_AddProfesor_Click);
             // 
-            // button3
+            // btn_AddAlumno
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(6, 167);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(166, 28);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Alumno";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btn_AddAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.btn_AddAlumno.FlatAppearance.BorderSize = 0;
+            this.btn_AddAlumno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.btn_AddAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddAlumno.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_AddAlumno.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_AddAlumno.Location = new System.Drawing.Point(6, 167);
+            this.btn_AddAlumno.Name = "btn_AddAlumno";
+            this.btn_AddAlumno.Size = new System.Drawing.Size(166, 28);
+            this.btn_AddAlumno.TabIndex = 5;
+            this.btn_AddAlumno.Text = "Alumno";
+            this.btn_AddAlumno.UseVisualStyleBackColor = false;
+            this.btn_AddAlumno.Click += new System.EventHandler(this.btn_AddAlumno_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(61, 101);
+            this.label1.Location = new System.Drawing.Point(61, 99);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 26);
             this.label1.TabIndex = 4;
@@ -230,20 +232,21 @@
             this.panel3.Size = new System.Drawing.Size(7, 28);
             this.panel3.TabIndex = 1;
             // 
-            // button2
+            // btn_AsignarProfesor
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(6, 285);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(163, 28);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Asignar profesor";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_AsignarProfesor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.btn_AsignarProfesor.FlatAppearance.BorderSize = 0;
+            this.btn_AsignarProfesor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.btn_AsignarProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AsignarProfesor.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_AsignarProfesor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_AsignarProfesor.Location = new System.Drawing.Point(6, 285);
+            this.btn_AsignarProfesor.Name = "btn_AsignarProfesor";
+            this.btn_AsignarProfesor.Size = new System.Drawing.Size(163, 28);
+            this.btn_AsignarProfesor.TabIndex = 2;
+            this.btn_AsignarProfesor.Text = "Asignar profesor";
+            this.btn_AsignarProfesor.UseVisualStyleBackColor = false;
+            this.btn_AsignarProfesor.Click += new System.EventHandler(this.btn_AsignarProfesor_Click);
             // 
             // btn_AddAdmin
             // 
@@ -302,13 +305,13 @@
         private Button btn_AddAdmin;
         private Panel panel4;
         private Panel panel3;
-        private Button button2;
+        private Button btn_AsignarProfesor;
         private Label label3;
-        private Button button6;
-        private Button button5;
+        private Button btn_EstadoAlumno;
+        private Button btn_AddMateria;
         private Label label2;
-        private Button button4;
-        private Button button3;
+        private Button btn_AddProfesor;
+        private Button btn_AddAlumno;
         private Label label1;
         private Panel panel5;
         private Panel pnl_Contenedor;

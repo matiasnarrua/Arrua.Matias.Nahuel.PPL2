@@ -62,14 +62,29 @@ namespace Arrua.Matias.Nahuel.Tp1
             AbrirFormHijo(new frm_AltaAdmin());
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btn_AddAlumno_Click(object sender, EventArgs e)
         {
             AbrirFormHijo(new frm_AltaAlumno());
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btn_AddProfesor_Click(object sender, EventArgs e)
         {
             AbrirFormHijo(new frm_AltaProfesor());
+        }
+
+        private void btn_AsignarProfesor_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new frm_AsignarProfesor());
+        }
+
+        private void btn_AddMateria_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new frm_CrearMateria());
+        }
+
+        private void btn_EstadoAlumno_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new frm_EstadoAlumno());
         }
     }
 }

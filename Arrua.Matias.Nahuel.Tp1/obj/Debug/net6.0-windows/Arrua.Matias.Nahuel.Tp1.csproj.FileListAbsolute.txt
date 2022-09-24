@@ -20,3 +20,6 @@ Z:\Facu 2022\2C\Tp1\Arrua.Matias.Nahuel.Tp1\Arrua.Matias.Nahuel.Tp1\obj\Debug\ne
 Z:\Facu 2022\2C\Tp1\Arrua.Matias.Nahuel.Tp1\Arrua.Matias.Nahuel.Tp1\obj\Debug\net6.0-windows\Arrua.Matias.Nahuel.Tp1.AdminPages.frm_AltaAdmin.resources
 Z:\Facu 2022\2C\Tp1\Arrua.Matias.Nahuel.Tp1\Arrua.Matias.Nahuel.Tp1\obj\Debug\net6.0-windows\Arrua.Matias.Nahuel.Tp1.AdminPages.frm_AltaAlumno.resources
 Z:\Facu 2022\2C\Tp1\Arrua.Matias.Nahuel.Tp1\Arrua.Matias.Nahuel.Tp1\obj\Debug\net6.0-windows\Arrua.Matias.Nahuel.Tp1.AdminPages.frm_AltaProfesor.resources
+Z:\Facu 2022\2C\Tp1\Arrua.Matias.Nahuel.Tp1\Arrua.Matias.Nahuel.Tp1\obj\Debug\net6.0-windows\Arrua.Matias.Nahuel.Tp1.AdminPages.frm_AsignarProfesor.resources
+Z:\Facu 2022\2C\Tp1\Arrua.Matias.Nahuel.Tp1\Arrua.Matias.Nahuel.Tp1\obj\Debug\net6.0-windows\Arrua.Matias.Nahuel.Tp1.AdminPages.frm_CrearMateria.resources
+Z:\Facu 2022\2C\Tp1\Arrua.Matias.Nahuel.Tp1\Arrua.Matias.Nahuel.Tp1\obj\Debug\net6.0-windows\Arrua.Matias.Nahuel.Tp1.AdminPages.frm_EstadoAlumno.resources
