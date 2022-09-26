@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices;
+using TiposDeUsuarios;
 
 namespace Arrua.Matias.Nahuel.Tp1
 {
@@ -55,7 +56,7 @@ namespace Arrua.Matias.Nahuel.Tp1
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btn_ingresar_Click(object sender, EventArgs e)
@@ -73,6 +74,29 @@ namespace Arrua.Matias.Nahuel.Tp1
                 //TODO : 2 - agregar mensaje de error pass/user mal
             }
 
+        }
+
+        private void btn_PreAdmin_Click(object sender, EventArgs e)
+        {
+            //TODO : 3 precargar admin en los box
+            this.Hide();
+            frm_Admin admin = new frm_Admin();
+            admin.Show();
+
+        }
+
+        private void btn_PreAlumno_Click(object sender, EventArgs e)
+        {//TODO : 3 precargar Alumno en los box
+            this.Hide();
+           frm_Alumno alumno = new frm_Alumno();
+            alumno.Show();
+        }
+
+        private void btn_PreProfesor_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_Profesor profesor = new frm_Profesor();
+            profesor.Show();
         }
     }
 }

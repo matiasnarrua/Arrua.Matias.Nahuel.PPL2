@@ -23,3 +23,12 @@ Z:\Facu 2022\2C\Tp1\Arrua.Matias.Nahuel.Tp1\Arrua.Matias.Nahuel.Tp1\obj\Debug\ne
 Z:\Facu 2022\2C\Tp1\Arrua.Matias.Nahuel.Tp1\Arrua.Matias.Nahuel.Tp1\obj\Debug\net6.0-windows\Arrua.Matias.Nahuel.Tp1.AdminPages.frm_AsignarProfesor.resources
 Z:\Facu 2022\2C\Tp1\Arrua.Matias.Nahuel.Tp1\Arrua.Matias.Nahuel.Tp1\obj\Debug\net6.0-windows\Arrua.Matias.Nahuel.Tp1.AdminPages.frm_CrearMateria.resources
 Z:\Facu 2022\2C\Tp1\Arrua.Matias.Nahuel.Tp1\Arrua.Matias.Nahuel.Tp1\obj\Debug\net6.0-windows\Arrua.Matias.Nahuel.Tp1.AdminPages.frm_EstadoAlumno.resources
+Z:\Facu 2022\2C\Tp1\Arrua.Matias.Nahuel.Tp1\Arrua.Matias.Nahuel.Tp1\obj\Debug\net6.0-windows\Arrua.Matias.Nahuel.Tp1.frm_Alumno.resources
+Z:\Facu 2022\2C\Tp1\Arrua.Matias.Nahuel.Tp1\Arrua.Matias.Nahuel.Tp1\obj\Debug\net6.0-windows\Arrua.Matias.Nahuel.Tp1.AlumnoPages.frm_DarPresente.resources
+Z:\Facu 2022\2C\Tp1\Arrua.Matias.Nahuel.Tp1\Arrua.Matias.Nahuel.Tp1\obj\Debug\net6.0-windows\Arrua.Matias.Nahuel.Tp1.AlumnoPages.frm_IncripcionMaterias.resources
+Z:\Facu 2022\2C\Tp1\Arrua.Matias.Nahuel.Tp1\Arrua.Matias.Nahuel.Tp1\bin\Debug\net6.0-windows\TiposDeUsuarios.dll
+Z:\Facu 2022\2C\Tp1\Arrua.Matias.Nahuel.Tp1\Arrua.Matias.Nahuel.Tp1\bin\Debug\net6.0-windows\TiposDeUsuarios.pdb
+Z:\Facu 2022\2C\Tp1\Arrua.Matias.Nahuel.Tp1\Arrua.Matias.Nahuel.Tp1\obj\Debug\net6.0-windows\Arrua.Matias.Nahuel.Tp1.csproj.CopyComplete
+Z:\Facu 2022\2C\Tp1\Arrua.Matias.Nahuel.Tp1\Arrua.Matias.Nahuel.Tp1\obj\Debug\net6.0-windows\Arrua.Matias.Nahuel.Tp1.frm_Profesor.resources
+Z:\Facu 2022\2C\Tp1\Arrua.Matias.Nahuel.Tp1\Arrua.Matias.Nahuel.Tp1\obj\Debug\net6.0-windows\Arrua.Matias.Nahuel.Tp1.ProfesorPages.frm_CargarNota.resources
+Z:\Facu 2022\2C\Tp1\Arrua.Matias.Nahuel.Tp1\Arrua.Matias.Nahuel.Tp1\obj\Debug\net6.0-windows\Arrua.Matias.Nahuel.Tp1.ProfesorPages.frm_CrearExamen.resources

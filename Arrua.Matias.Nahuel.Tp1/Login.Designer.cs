@@ -125,6 +125,7 @@
             this.btn_PreAdmin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_PreAdmin.Name = "btn_PreAdmin";
             this.btn_PreAdmin.UseVisualStyleBackColor = true;
+            this.btn_PreAdmin.Click += new System.EventHandler(this.btn_PreAdmin_Click);
             // 
             // btn_PreProfesor
             // 
@@ -132,6 +133,7 @@
             this.btn_PreProfesor.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_PreProfesor.Name = "btn_PreProfesor";
             this.btn_PreProfesor.UseVisualStyleBackColor = true;
+            this.btn_PreProfesor.Click += new System.EventHandler(this.btn_PreProfesor_Click);
             // 
             // btn_PreAlumno
             // 
@@ -139,6 +141,7 @@
             this.btn_PreAlumno.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_PreAlumno.Name = "btn_PreAlumno";
             this.btn_PreAlumno.UseVisualStyleBackColor = true;
+            this.btn_PreAlumno.Click += new System.EventHandler(this.btn_PreAlumno_Click);
             // 
             // label3
             // 

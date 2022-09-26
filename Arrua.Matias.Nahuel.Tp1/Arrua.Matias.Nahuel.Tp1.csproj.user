@@ -22,7 +22,25 @@
     <Compile Update="AdminPages\EstadoAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AlumnoPages\DarPresente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AlumnoPages\Incripcion Materias.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Profesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ProfesorPages\CargarNota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ProfesorPages\CrearExamen.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

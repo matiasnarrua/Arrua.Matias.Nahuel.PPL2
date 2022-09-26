@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0-windows7.0": {}
+    "net6.0-windows7.0": {
+      "TiposDeUsuarios/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/TiposDeUsuarios.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TiposDeUsuarios.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "TiposDeUsuarios/1.0.0": {
+      "type": "project",
+      "path": "../TiposDeUsuarios/TiposDeUsuarios.csproj",
+      "msbuildProject": "../TiposDeUsuarios/TiposDeUsuarios.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0-windows7.0": []
+    "net6.0-windows7.0": [
+      "TiposDeUsuarios >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Mati\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "Z:\\Facu 2022\\2C\\Tp1\\Arrua.Matias.Nahuel.Tp1\\TiposDeUsuarios\\TiposDeUsuarios.csproj": {
+              "projectPath": "Z:\\Facu 2022\\2C\\Tp1\\Arrua.Matias.Nahuel.Tp1\\TiposDeUsuarios\\TiposDeUsuarios.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
