@@ -44,6 +44,7 @@
             this.lbl_NombreProfesor = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_CerrarUserProfesor = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MinimizeProfesor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MinimizeAlumno)).BeginInit();
@@ -67,6 +68,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.panel1.Controls.Add(this.btn_CerrarUserProfesor);
             this.panel1.Controls.Add(this.btn_MinimizeProfesor);
             this.panel1.Controls.Add(this.btn_MinimizeAlumno);
             this.panel1.Controls.Add(this.btn_CloseProfesor);
@@ -253,6 +255,21 @@
             this.panel5.Size = new System.Drawing.Size(178, 2);
             this.panel5.TabIndex = 11;
             // 
+            // btn_CerrarUserProfesor
+            // 
+            this.btn_CerrarUserProfesor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.btn_CerrarUserProfesor.FlatAppearance.BorderSize = 0;
+            this.btn_CerrarUserProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CerrarUserProfesor.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_CerrarUserProfesor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_CerrarUserProfesor.Location = new System.Drawing.Point(8, 5);
+            this.btn_CerrarUserProfesor.Name = "btn_CerrarUserProfesor";
+            this.btn_CerrarUserProfesor.Size = new System.Drawing.Size(142, 23);
+            this.btn_CerrarUserProfesor.TabIndex = 10;
+            this.btn_CerrarUserProfesor.Text = "Cerrar Sesion";
+            this.btn_CerrarUserProfesor.UseVisualStyleBackColor = true;
+            this.btn_CerrarUserProfesor.Click += new System.EventHandler(this.btn_CerrarUserProfesor_Click);
+            // 
             // frm_Profesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -298,5 +315,6 @@
         private Label lbl_NombreProfesor;
         private Label label1;
         private Panel panel5;
+        private Button btn_CerrarUserProfesor;
     }
 }

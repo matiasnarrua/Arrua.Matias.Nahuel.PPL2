@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_CerrarUserAlumno = new System.Windows.Forms.Button();
             this.btn_MinimizeAlumno = new System.Windows.Forms.PictureBox();
             this.btn_CloseAlumno = new System.Windows.Forms.PictureBox();
             this.btn_Minimize = new System.Windows.Forms.PictureBox();
@@ -53,6 +54,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.panel1.Controls.Add(this.btn_CerrarUserAlumno);
             this.panel1.Controls.Add(this.btn_MinimizeAlumno);
             this.panel1.Controls.Add(this.btn_CloseAlumno);
             this.panel1.Controls.Add(this.btn_Minimize);
@@ -63,6 +65,20 @@
             this.panel1.Size = new System.Drawing.Size(710, 40);
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // btn_CerrarUserAlumno
+            // 
+            this.btn_CerrarUserAlumno.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.btn_CerrarUserAlumno.FlatAppearance.BorderSize = 0;
+            this.btn_CerrarUserAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CerrarUserAlumno.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_CerrarUserAlumno.Location = new System.Drawing.Point(8, 5);
+            this.btn_CerrarUserAlumno.Name = "btn_CerrarUserAlumno";
+            this.btn_CerrarUserAlumno.Size = new System.Drawing.Size(142, 23);
+            this.btn_CerrarUserAlumno.TabIndex = 8;
+            this.btn_CerrarUserAlumno.Text = "Cerrar Sesion";
+            this.btn_CerrarUserAlumno.UseVisualStyleBackColor = true;
+            this.btn_CerrarUserAlumno.Click += new System.EventHandler(this.btn_CerrarUserAlumno_Click);
             // 
             // btn_MinimizeAlumno
             // 
@@ -261,5 +277,6 @@
         private Label label1;
         private Button btn_DarPresente;
         private Button btn_Inscripcion;
+        private Button btn_CerrarUserAlumno;
     }
 }

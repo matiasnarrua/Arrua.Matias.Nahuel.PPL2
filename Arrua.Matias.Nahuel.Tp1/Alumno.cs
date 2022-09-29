@@ -10,17 +10,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Arrua.Matias.Nahuel.Tp1.AlumnoPages;
+using TiposDeUsuarios;
 
 
 namespace Arrua.Matias.Nahuel.Tp1
 {
     public partial class frm_Alumno : Form
     {
+       
         public frm_Alumno()
         {
             InitializeComponent();
         }
-
+            
         #region Mover ventana
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -67,7 +69,15 @@ namespace Arrua.Matias.Nahuel.Tp1
 
         private void btn_CloseAlumno_Click(object sender, EventArgs e)
         {
+            
             Application.Exit();
+        }
+
+        private void btn_CerrarUserAlumno_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_Login log = new frm_Login();
+            log.ShowDialog();
         }
     }
 }

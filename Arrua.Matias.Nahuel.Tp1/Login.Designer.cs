@@ -34,8 +34,8 @@
             this.btn_Close = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_ingresar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_Usuario = new System.Windows.Forms.TextBox();
+            this.txt_Pass = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -89,15 +89,15 @@
             this.btn_ingresar.UseVisualStyleBackColor = true;
             this.btn_ingresar.Click += new System.EventHandler(this.btn_ingresar_Click);
             // 
-            // textBox1
+            // txt_Usuario
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
+            resources.ApplyResources(this.txt_Usuario, "txt_Usuario");
+            this.txt_Usuario.Name = "txt_Usuario";
             // 
-            // textBox2
+            // txt_Pass
             // 
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.Name = "textBox2";
+            resources.ApplyResources(this.txt_Pass, "txt_Pass");
+            this.txt_Pass.Name = "txt_Pass";
             // 
             // label1
             // 
@@ -162,8 +162,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_Pass);
+            this.Controls.Add(this.txt_Usuario);
             this.Controls.Add(this.btn_ingresar);
             this.Controls.Add(this.panel2);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -187,8 +187,8 @@
         private PictureBox btn_Minimize;
         private PictureBox btn_Close;
         private Button btn_ingresar;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txt_Usuario;
+        private TextBox txt_Pass;
         private Label label1;
         private Label label2;
         private PictureBox pictureBox1;

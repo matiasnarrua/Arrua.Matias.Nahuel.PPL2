@@ -1,14 +1,22 @@
 using System.Runtime.InteropServices;
 using TiposDeUsuarios;
 
+
 namespace Arrua.Matias.Nahuel.Tp1
 {
+    
     public partial class frm_Login : Form
     {
+        
+        
         public frm_Login()
-        {
-            InitializeComponent();
-        }
+        {              
+        InitializeComponent();
+            Datos.HardcodearListas();
+            Datos.HardcodearListaMaterias();
+
+        }           
+
         #region Mover ventana
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -42,7 +50,12 @@ namespace Arrua.Matias.Nahuel.Tp1
 
         #endregion
 
+        private void Login_Load(object sender, EventArgs e)
+        {
 
+        }
+
+        #region Buttons
         private void btn_Close_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -53,21 +66,20 @@ namespace Arrua.Matias.Nahuel.Tp1
             this.WindowState = FormWindowState.Minimized;
 
         }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-            
-        }
-
+               
         private void btn_ingresar_Click(object sender, EventArgs e)
         {
+            
+            
+            
+            
+            
+            
             //TODO : 1 - Chequear contraseña
-
+            //TODO : 4 - usar switch con los user pre cargados
             if (true)
             {
-                this.Hide();
-            frm_Admin admin = new frm_Admin();
-                admin.Show();
+               
             }
             else
             {
@@ -77,26 +89,40 @@ namespace Arrua.Matias.Nahuel.Tp1
         }
 
         private void btn_PreAdmin_Click(object sender, EventArgs e)
-        {
-            //TODO : 3 precargar admin en los box
-            this.Hide();
-            frm_Admin admin = new frm_Admin();
-            admin.Show();
+        {                   
+             txt_Usuario.Text = "admin@utn.com";
+            txt_Pass.Text = "admin";
+
+            
+            /* this.Hide();
+             frm_Admin admin = new frm_Admin();
+             admin.ShowDialog();*/
 
         }
 
         private void btn_PreAlumno_Click(object sender, EventArgs e)
-        {//TODO : 3 precargar Alumno en los box
-            this.Hide();
+        {
+            txt_Usuario.Text = "alumno1@utn.com";
+            txt_Pass.Text = "alumno1";
+
+            
+           /* this.Hide();
            frm_Alumno alumno = new frm_Alumno();
-            alumno.Show();
+            alumno.Show();*/
         }
 
         private void btn_PreProfesor_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            txt_Usuario.Text = "profesor@utn.com";
+            txt_Pass.Text = "profesor";
+
+          /*  this.Hide();
             frm_Profesor profesor = new frm_Profesor();
-            profesor.Show();
+            profesor.Show();*/
         }
+        #endregion
+
+
+        
     }
 }

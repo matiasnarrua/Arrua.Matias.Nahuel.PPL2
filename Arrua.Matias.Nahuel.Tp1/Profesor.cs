@@ -66,5 +66,12 @@ namespace Arrua.Matias.Nahuel.Tp1
         {
             AbrirFormHijo(new frm_CargarNota());
         }
+
+        private void btn_CerrarUserProfesor_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_Login log = new frm_Login();
+            log.ShowDialog();
+        }
     }
 }
