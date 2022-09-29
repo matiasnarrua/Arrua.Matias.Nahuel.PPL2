@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using TiposDeUsuarios;
 
@@ -16,6 +17,10 @@ namespace Arrua.Matias.Nahuel.Tp1
             Datos.HardcodearListaMaterias();
 
         }           
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
 
         #region Mover ventana
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -50,10 +55,6 @@ namespace Arrua.Matias.Nahuel.Tp1
 
         #endregion
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
 
         #region Buttons
         private void btn_Close_Click(object sender, EventArgs e)
@@ -69,60 +70,110 @@ namespace Arrua.Matias.Nahuel.Tp1
                
         private void btn_ingresar_Click(object sender, EventArgs e)
         {
-            
-            
-            
-            
-            
-            
+            List<Usuario> list = new List<Usuario>();
+            list.AddRange(Datos.listaAlumnos);
+            list.AddRange(Datos.listaAdmins);
+            list.AddRange(Datos.listaProfesores);
+
+            //MessageBox.Show(admin.GetType().ToString());
+            ComprobarUsuario(list);
+
             //TODO : 1 - Chequear contraseña
             //TODO : 4 - usar switch con los user pre cargados
-            if (true)
-            {
-               
-            }
-            else
-            {
-                //TODO : 2 - agregar mensaje de error pass/user mal
-            }
+            //TODO : 2 - agregar mensaje de error pass/user mal
+            
 
         }
+        #endregion
 
+        #region CargarUsuarios TextBox
         private void btn_PreAdmin_Click(object sender, EventArgs e)
         {                   
              txt_Usuario.Text = "admin@utn.com";
-            txt_Pass.Text = "admin";
-
+            txt_Pass.Text = "admin";                      
             
-            /* this.Hide();
-             frm_Admin admin = new frm_Admin();
-             admin.ShowDialog();*/
-
         }
 
         private void btn_PreAlumno_Click(object sender, EventArgs e)
         {
             txt_Usuario.Text = "alumno1@utn.com";
             txt_Pass.Text = "alumno1";
-
-            
-           /* this.Hide();
-           frm_Alumno alumno = new frm_Alumno();
-            alumno.Show();*/
-        }
+          
+         }
 
         private void btn_PreProfesor_Click(object sender, EventArgs e)
         {
             txt_Usuario.Text = "profesor@utn.com";
             txt_Pass.Text = "profesor";
-
-          /*  this.Hide();
-            frm_Profesor profesor = new frm_Profesor();
-            profesor.Show();*/
+          
         }
         #endregion
 
+        public void MensajeDeErrorContaseña()
+        {
+            if ((txt_Usuario.Text == "") && (txt_Pass.Text == ""))
+            {
+                MessageBox.Show("Ingrese Usuario y Contraseña");
 
+            }
+            else if (txt_Usuario.Text == "")
+            {
+                MessageBox.Show("Ingrese Usuario");
+
+            }
+            else if (txt_Pass.Text == "")
+            {
+                MessageBox.Show("Ingrese Contraseña");
+            }
+            else 
+            { 
+                MessageBox.Show("Usuario y/o Contraseña incorrecto");
+            }
+            
+        }
+        public void ComprobarUsuario(List<Usuario> list)
+        {
+
+            foreach (Usuario usuario in list)
+            {
+                Admin admin = new Admin("", "");
+                Alumno alumno = new Alumno("", "");
+                Profesor profesor = new Profesor("", "");
+
+                if ((usuario.User == txt_Usuario.Text) && (usuario.Pass == txt_Pass.Text) && (usuario.GetType().ToString() == admin.GetType().ToString()))
+                {
+                    this.Hide();
+                    frm_Admin frm_admin = new frm_Admin();
+                    frm_admin.Show();
+                    break;
+                }
+                else if ((usuario.User == txt_Usuario.Text) && (usuario.Pass == txt_Pass.Text) && (usuario.GetType().ToString() == alumno.GetType().ToString()))
+                {
+                    this.Hide();
+                    frm_Alumno frm_alumno = new frm_Alumno();
+                    frm_alumno.Show();
+                    break;
+                }
+                else if ((usuario.User == txt_Usuario.Text) && (usuario.Pass == txt_Pass.Text) && (usuario.GetType().ToString() == profesor.GetType().ToString()))
+                {
+                    this.Hide();
+                    frm_Profesor frm_profesor = new frm_Profesor();
+                    frm_profesor.Show();
+                    break;
+                }
+               /* else
+                {
+                    MensajeDeErrorContaseña();
+                    if (txt_Usuario.Text  == String.Empty  || txt_Pass.Text == String.Empty || usuario.Pass != txt_Pass.Text)
+                    {
+                        break;
+                    }
+
+
+                }*/
+
+            }
+        }
         
     }
 }

@@ -21,34 +21,19 @@ namespace Arrua.Matias.Nahuel.Tp1.AlumnoPages
         public frm_IncripcionMaterias()
         {
             InitializeComponent();
-            
+            BindingSource bs = new BindingSource();
+            bs.DataSource = Datos.listaMaterias;
+            dgv_Materias.DataSource = bs;
         }
-        
+
 
         private void frm_IncripcionMaterias_Load(object sender, EventArgs e)
         {
-           // List<Materia> materiaList = new List<Materia>();
-            
-          //  materiaList = Datos.LlamarListaMaterias();
 
-           BindingSource bs = new BindingSource();                                         
-           // bs.DataSource = materiaList;
-            bs.DataSource = Datos.LlamarListaMaterias().ToString(); 
-            dgv_Materias.DataSource = bs;
-
-
-            /*List<string> list = new List<string>();
-            list.Add("Pepe");
-            list.Add("carlo");
-            BindingSource bs = new BindingSource();
-            bs.DataSource = list;
-            dgv_Materias.DataSource = bs;*/
-
-            
         }
 
 
-        
+
     }
 }
 

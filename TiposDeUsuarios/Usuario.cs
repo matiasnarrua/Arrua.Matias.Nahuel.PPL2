@@ -11,6 +11,10 @@
             this._pass = pass;
         }
 
+        public string User { get => _user; set => _user = value; }
+        public string Pass { get => _pass; set => _pass = value; }
+
         public abstract void PrecargarUsuarios(List <Type> lista );
+        
     }
 }

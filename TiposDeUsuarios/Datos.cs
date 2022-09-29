@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -117,6 +118,11 @@ namespace TiposDeUsuarios
             HardcodearListaAdmins();
             HardcodearListaProfesores();
 
+        }
+
+        public static string HacerPrimerLetraMayus(this string value)
+        {
+            return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(value);
         }
     }
 }

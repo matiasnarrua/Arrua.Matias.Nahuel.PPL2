@@ -27,4 +27,8 @@
     <ProjectReference Include="..\TiposDeUsuarios\TiposDeUsuarios.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+
 </Project>
