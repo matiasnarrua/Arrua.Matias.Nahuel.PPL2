@@ -17,18 +17,23 @@ namespace TiposDeUsuarios
         {
 
         }
-        public Alumno(string user, string pass, string nombre, List<Materia> materiasCursadas) : base(user, pass)
+        public Alumno(string user, string pass, string nombre) : base(user, pass)
         {
-            this.Nombre = nombre;
+            this.Nombre = nombre;            
+
+        }
+        public Alumno(string user, string pass, string nombre, List<Materia> materiasCursadas) : this(user, pass,nombre)
+        {
+            
             this.materiasCursadas = materiasCursadas;   
             
         }
 
         public string Nombre { get => _nombre; set => _nombre = value; }
 
-        public override void PrecargarUsuarios(List<Type> lista)
+        public override void AgregarUsuario(string user, string pass, string nombre)
         {
-
+            Datos.listaAlumnos.Add(new Alumno(user.ToLower(), pass, Datos.HacerPrimerLetraMayus(nombre)));
         }
     }
 }

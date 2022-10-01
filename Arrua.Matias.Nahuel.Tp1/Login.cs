@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using TiposDeUsuarios;
 
 
@@ -7,14 +8,16 @@ namespace Arrua.Matias.Nahuel.Tp1
 {
     
     public partial class frm_Login : Form
-    {
-        
-        
+    {             
         public frm_Login()
         {              
         InitializeComponent();
-            Datos.HardcodearListas();
-            Datos.HardcodearListaMaterias();
+            if (Datos.flag)
+            {
+                Datos.HardcodearListas();              
+                Datos.flag = false;
+            }
+                                
 
         }           
         private void Login_Load(object sender, EventArgs e)
@@ -75,15 +78,14 @@ namespace Arrua.Matias.Nahuel.Tp1
             list.AddRange(Datos.listaAdmins);
             list.AddRange(Datos.listaProfesores);
 
-            //MessageBox.Show(admin.GetType().ToString());
-            ComprobarUsuario(list);
-
-            //TODO : 1 - Chequear contraseña
-            //TODO : 4 - usar switch con los user pre cargados
-            //TODO : 2 - agregar mensaje de error pass/user mal
-            
+            LoginUsuario(list);                        
+            //TODO : 2 - agregar mensaje de error pass/user mal            
 
         }
+
+
+
+
         #endregion
 
         #region CargarUsuarios TextBox
@@ -131,7 +133,7 @@ namespace Arrua.Matias.Nahuel.Tp1
             }
             
         }
-        public void ComprobarUsuario(List<Usuario> list)
+        public void LoginUsuario(List<Usuario> list)
         {
 
             foreach (Usuario usuario in list)
@@ -149,6 +151,7 @@ namespace Arrua.Matias.Nahuel.Tp1
                 }
                 else if ((usuario.User == txt_Usuario.Text) && (usuario.Pass == txt_Pass.Text) && (usuario.GetType().ToString() == alumno.GetType().ToString()))
                 {
+                    
                     this.Hide();
                     frm_Alumno frm_alumno = new frm_Alumno();
                     frm_alumno.Show();
@@ -156,8 +159,9 @@ namespace Arrua.Matias.Nahuel.Tp1
                 }
                 else if ((usuario.User == txt_Usuario.Text) && (usuario.Pass == txt_Pass.Text) && (usuario.GetType().ToString() == profesor.GetType().ToString()))
                 {
+                    profesor = Datos.DevolverProfesor(usuario.User, Datos.listaProfesores);
                     this.Hide();
-                    frm_Profesor frm_profesor = new frm_Profesor();
+                    frm_Profesor frm_profesor = new frm_Profesor(profesor);
                     frm_profesor.Show();
                     break;
                 }

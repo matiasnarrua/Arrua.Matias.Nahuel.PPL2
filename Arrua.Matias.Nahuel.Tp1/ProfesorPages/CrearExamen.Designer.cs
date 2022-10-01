@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.dgv_Examenes = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Examenes)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -42,16 +44,29 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Crear Examen";
             // 
+            // dgv_Examenes
+            // 
+            this.dgv_Examenes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.dgv_Examenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Examenes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.dgv_Examenes.Location = new System.Drawing.Point(99, 56);
+            this.dgv_Examenes.Name = "dgv_Examenes";
+            this.dgv_Examenes.RowTemplate.Height = 25;
+            this.dgv_Examenes.Size = new System.Drawing.Size(334, 300);
+            this.dgv_Examenes.TabIndex = 5;
+            // 
             // frm_CrearExamen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(532, 412);
+            this.Controls.Add(this.dgv_Examenes);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_CrearExamen";
             this.Text = "CrearExamen";
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Examenes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -60,5 +75,6 @@
         #endregion
 
         private Label label1;
+        private DataGridView dgv_Examenes;
     }
 }

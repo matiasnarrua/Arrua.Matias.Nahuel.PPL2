@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_Titulo = new System.Windows.Forms.Label();
             this.txt_NombreAdminAlta = new System.Windows.Forms.TextBox();
             this.txt_PassAdminAlta = new System.Windows.Forms.TextBox();
             this.txt_UserAdminAlta = new System.Windows.Forms.TextBox();
             this.dgv_Usuarios = new System.Windows.Forms.DataGridView();
             this.btn_AceptarAltaAdmin = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_Nombre = new System.Windows.Forms.Label();
+            this.lbl_Pass = new System.Windows.Forms.Label();
+            this.lbl_User = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lbl_Titulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(174, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Alta Admin";
+            this.lbl_Titulo.AutoSize = true;
+            this.lbl_Titulo.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Titulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_Titulo.Location = new System.Drawing.Point(174, 9);
+            this.lbl_Titulo.Name = "lbl_Titulo";
+            this.lbl_Titulo.Size = new System.Drawing.Size(172, 37);
+            this.lbl_Titulo.TabIndex = 0;
+            this.lbl_Titulo.Text = "Alta Admin";
             // 
             // txt_NombreAdminAlta
             // 
@@ -74,7 +74,9 @@
             // 
             // dgv_Usuarios
             // 
+            this.dgv_Usuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.dgv_Usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Usuarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.dgv_Usuarios.Location = new System.Drawing.Point(12, 69);
             this.dgv_Usuarios.Name = "dgv_Usuarios";
             this.dgv_Usuarios.RowTemplate.Height = 25;
@@ -91,38 +93,38 @@
             this.btn_AceptarAltaAdmin.UseVisualStyleBackColor = true;
             this.btn_AceptarAltaAdmin.Click += new System.EventHandler(this.btn_AceptarAltaAdmin_Click);
             // 
-            // label2
+            // lbl_Nombre
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(375, 78);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 19);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Nombre";
+            this.lbl_Nombre.AutoSize = true;
+            this.lbl_Nombre.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Nombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_Nombre.Location = new System.Drawing.Point(375, 78);
+            this.lbl_Nombre.Name = "lbl_Nombre";
+            this.lbl_Nombre.Size = new System.Drawing.Size(66, 19);
+            this.lbl_Nombre.TabIndex = 6;
+            this.lbl_Nombre.Text = "Nombre";
             // 
-            // label3
+            // lbl_Pass
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(375, 141);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 19);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Contraseña";
+            this.lbl_Pass.AutoSize = true;
+            this.lbl_Pass.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Pass.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_Pass.Location = new System.Drawing.Point(375, 141);
+            this.lbl_Pass.Name = "lbl_Pass";
+            this.lbl_Pass.Size = new System.Drawing.Size(88, 19);
+            this.lbl_Pass.TabIndex = 7;
+            this.lbl_Pass.Text = "Contraseña";
             // 
-            // label4
+            // lbl_User
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(375, 200);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 19);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Usuario";
+            this.lbl_User.AutoSize = true;
+            this.lbl_User.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_User.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_User.Location = new System.Drawing.Point(375, 200);
+            this.lbl_User.Name = "lbl_User";
+            this.lbl_User.Size = new System.Drawing.Size(63, 19);
+            this.lbl_User.TabIndex = 8;
+            this.lbl_User.Text = "Usuario";
             // 
             // frm_AltaAdmin
             // 
@@ -130,15 +132,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(532, 412);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_User);
+            this.Controls.Add(this.lbl_Pass);
+            this.Controls.Add(this.lbl_Nombre);
             this.Controls.Add(this.btn_AceptarAltaAdmin);
             this.Controls.Add(this.dgv_Usuarios);
             this.Controls.Add(this.txt_UserAdminAlta);
             this.Controls.Add(this.txt_PassAdminAlta);
             this.Controls.Add(this.txt_NombreAdminAlta);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_Titulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_AltaAdmin";
             this.Text = "AltaAdmin";
@@ -150,14 +152,14 @@
 
         #endregion
 
-        private Label label1;
+        private Label lbl_Titulo;
         private TextBox txt_NombreAdminAlta;
         private TextBox txt_PassAdminAlta;
         private TextBox txt_UserAdminAlta;
         private DataGridView dgv_Usuarios;
         private Button btn_AceptarAltaAdmin;
-        private Label label2;
-        private Label label3;
-        private Label label4;
+        private Label lbl_Nombre;
+        private Label lbl_Pass;
+        private Label lbl_User;
     }
 }

@@ -30,6 +30,7 @@
         {
             this.pnl_Contenedor = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_CerrarUserProfesor = new System.Windows.Forms.Button();
             this.btn_MinimizeProfesor = new System.Windows.Forms.PictureBox();
             this.btn_MinimizeAlumno = new System.Windows.Forms.PictureBox();
             this.btn_CloseProfesor = new System.Windows.Forms.PictureBox();
@@ -37,14 +38,13 @@
             this.btn_Minimize = new System.Windows.Forms.PictureBox();
             this.btn_Close = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lbl_Materia = new System.Windows.Forms.Label();
             this.btn_CargarNota = new System.Windows.Forms.Button();
             this.btn_CrearExamen = new System.Windows.Forms.Button();
-            this.lbl_IdProfesor = new System.Windows.Forms.Label();
-            this.lbl_ApellidoProfesor = new System.Windows.Forms.Label();
+            this.lbl_UserProfesor = new System.Windows.Forms.Label();
             this.lbl_NombreProfesor = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btn_CerrarUserProfesor = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MinimizeProfesor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MinimizeAlumno)).BeginInit();
@@ -81,6 +81,21 @@
             this.panel1.Size = new System.Drawing.Size(710, 40);
             this.panel1.TabIndex = 3;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // btn_CerrarUserProfesor
+            // 
+            this.btn_CerrarUserProfesor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.btn_CerrarUserProfesor.FlatAppearance.BorderSize = 0;
+            this.btn_CerrarUserProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CerrarUserProfesor.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_CerrarUserProfesor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_CerrarUserProfesor.Location = new System.Drawing.Point(8, 5);
+            this.btn_CerrarUserProfesor.Name = "btn_CerrarUserProfesor";
+            this.btn_CerrarUserProfesor.Size = new System.Drawing.Size(142, 23);
+            this.btn_CerrarUserProfesor.TabIndex = 10;
+            this.btn_CerrarUserProfesor.Text = "Cerrar Sesion";
+            this.btn_CerrarUserProfesor.UseVisualStyleBackColor = true;
+            this.btn_CerrarUserProfesor.Click += new System.EventHandler(this.btn_CerrarUserProfesor_Click);
             // 
             // btn_MinimizeProfesor
             // 
@@ -159,10 +174,10 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.panel3.Controls.Add(this.lbl_Materia);
             this.panel3.Controls.Add(this.btn_CargarNota);
             this.panel3.Controls.Add(this.btn_CrearExamen);
-            this.panel3.Controls.Add(this.lbl_IdProfesor);
-            this.panel3.Controls.Add(this.lbl_ApellidoProfesor);
+            this.panel3.Controls.Add(this.lbl_UserProfesor);
             this.panel3.Controls.Add(this.lbl_NombreProfesor);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.panel5);
@@ -170,6 +185,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(178, 412);
             this.panel3.TabIndex = 5;
+            // 
+            // lbl_Materia
+            // 
+            this.lbl_Materia.AutoSize = true;
+            this.lbl_Materia.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Materia.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_Materia.Location = new System.Drawing.Point(28, 71);
+            this.lbl_Materia.Name = "lbl_Materia";
+            this.lbl_Materia.Size = new System.Drawing.Size(56, 17);
+            this.lbl_Materia.TabIndex = 18;
+            this.lbl_Materia.Text = "Materia";
             // 
             // btn_CargarNota
             // 
@@ -203,27 +229,16 @@
             this.btn_CrearExamen.UseVisualStyleBackColor = false;
             this.btn_CrearExamen.Click += new System.EventHandler(this.btn_CrearExamen_Click);
             // 
-            // lbl_IdProfesor
+            // lbl_UserProfesor
             // 
-            this.lbl_IdProfesor.AutoSize = true;
-            this.lbl_IdProfesor.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_IdProfesor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_IdProfesor.Location = new System.Drawing.Point(28, 68);
-            this.lbl_IdProfesor.Name = "lbl_IdProfesor";
-            this.lbl_IdProfesor.Size = new System.Drawing.Size(21, 17);
-            this.lbl_IdProfesor.TabIndex = 15;
-            this.lbl_IdProfesor.Text = "Id";
-            // 
-            // lbl_ApellidoProfesor
-            // 
-            this.lbl_ApellidoProfesor.AutoSize = true;
-            this.lbl_ApellidoProfesor.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_ApellidoProfesor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_ApellidoProfesor.Location = new System.Drawing.Point(28, 51);
-            this.lbl_ApellidoProfesor.Name = "lbl_ApellidoProfesor";
-            this.lbl_ApellidoProfesor.Size = new System.Drawing.Size(60, 17);
-            this.lbl_ApellidoProfesor.TabIndex = 14;
-            this.lbl_ApellidoProfesor.Text = "Apellido";
+            this.lbl_UserProfesor.AutoSize = true;
+            this.lbl_UserProfesor.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_UserProfesor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_UserProfesor.Location = new System.Drawing.Point(28, 54);
+            this.lbl_UserProfesor.Name = "lbl_UserProfesor";
+            this.lbl_UserProfesor.Size = new System.Drawing.Size(21, 17);
+            this.lbl_UserProfesor.TabIndex = 15;
+            this.lbl_UserProfesor.Text = "Id";
             // 
             // lbl_NombreProfesor
             // 
@@ -254,21 +269,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(178, 2);
             this.panel5.TabIndex = 11;
-            // 
-            // btn_CerrarUserProfesor
-            // 
-            this.btn_CerrarUserProfesor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.btn_CerrarUserProfesor.FlatAppearance.BorderSize = 0;
-            this.btn_CerrarUserProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_CerrarUserProfesor.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_CerrarUserProfesor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_CerrarUserProfesor.Location = new System.Drawing.Point(8, 5);
-            this.btn_CerrarUserProfesor.Name = "btn_CerrarUserProfesor";
-            this.btn_CerrarUserProfesor.Size = new System.Drawing.Size(142, 23);
-            this.btn_CerrarUserProfesor.TabIndex = 10;
-            this.btn_CerrarUserProfesor.Text = "Cerrar Sesion";
-            this.btn_CerrarUserProfesor.UseVisualStyleBackColor = true;
-            this.btn_CerrarUserProfesor.Click += new System.EventHandler(this.btn_CerrarUserProfesor_Click);
             // 
             // frm_Profesor
             // 
@@ -310,11 +310,11 @@
         private Panel panel3;
         private Button btn_CargarNota;
         private Button btn_CrearExamen;
-        private Label lbl_IdProfesor;
-        private Label lbl_ApellidoProfesor;
+        private Label lbl_UserProfesor;
         private Label lbl_NombreProfesor;
         private Label label1;
         private Panel panel5;
         private Button btn_CerrarUserProfesor;
+        private Label lbl_Materia;
     }
 }

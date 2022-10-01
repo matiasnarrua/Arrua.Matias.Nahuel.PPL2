@@ -14,6 +14,8 @@ namespace Arrua.Matias.Nahuel.Tp1.AdminPages
 {
     public partial class frm_AltaAdmin : Form
     {
+        Admin admin = new Admin("", "");
+        
         public frm_AltaAdmin()
         {
             InitializeComponent();
@@ -24,13 +26,28 @@ namespace Arrua.Matias.Nahuel.Tp1.AdminPages
 
         private void btn_AceptarAltaAdmin_Click(object sender, EventArgs e)
         {
-            Datos.listaAdmins.Add(new Admin(txt_UserAdminAlta.Text, txt_PassAdminAlta.Text.ToLower(), Datos.HacerPrimerLetraMayus(  txt_NombreAdminAlta.Text)   ));
-            MessageBox.Show($"El usuario {Datos.HacerPrimerLetraMayus(txt_NombreAdminAlta.Text)} Fue dado de alta");
-            
+            BindingSource bs = new BindingSource();
+            CargarAdmin();
+            bs.DataSource = Datos.listaAdmins;
+            dgv_Usuarios.DataSource = bs;
+
+        }
+        private void CargarAdmin()
+        {
+            if (Datos.BuscarMismoUser(txt_UserAdminAlta.Text, Datos.listaAdmins))
+            {
+                MessageBox.Show("El usuario/Mail ya existe");
+            }
+            else
+            {
+                admin.AgregarUsuario(txt_UserAdminAlta.Text, txt_PassAdminAlta.Text, txt_NombreAdminAlta.Text);
+
+                MessageBox.Show($"El usuario {Datos.HacerPrimerLetraMayus(txt_NombreAdminAlta.Text)} Fue dado de alta");
+            }
         }
 
-        //TODO-- crear funcion para comprar si hay un mail existente y agregarla al sumar un admin
-
+      
+        
 
         
     }

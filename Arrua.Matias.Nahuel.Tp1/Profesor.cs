@@ -10,15 +10,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Arrua.Matias.Nahuel.Tp1.ProfesorPages;
+using TiposDeUsuarios;
 
 namespace Arrua.Matias.Nahuel.Tp1
 {
     public partial class frm_Profesor : Form
     {
+        public Profesor profesor = new Profesor("", "");
         public frm_Profesor()
         {
             InitializeComponent();
+            
+
         }
+       
+        public frm_Profesor(Profesor profesor) : this()
+        {
+            this.profesor = profesor;
+            lbl_NombreProfesor.Text = profesor.Nombre;
+            lbl_UserProfesor.Text = profesor.User;
+            lbl_Materia.Text = profesor.MateriaAsignada;
+
+        }
+       
 
         #region Mover ventana
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -47,6 +61,8 @@ namespace Arrua.Matias.Nahuel.Tp1
             fh.Show();
 
         }
+
+        #region Buttons
         private void btn_MinimizeProfesor_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -59,12 +75,28 @@ namespace Arrua.Matias.Nahuel.Tp1
 
         private void btn_CrearExamen_Click(object sender, EventArgs e)
         {
-            AbrirFormHijo(new frm_CrearExamen());           
+            if (profesor.MateriaAsignada!= "-")
+            {
+                AbrirFormHijo(new frm_CrearExamen(profesor));
+            }
+            else
+            {
+                MessageBox.Show("No tiene materia asignada");
+            }
+                   
         }
 
         private void btn_CargarNota_Click(object sender, EventArgs e)
         {
-            AbrirFormHijo(new frm_CargarNota());
+            if (profesor.MateriaAsignada != "-")
+            {
+                AbrirFormHijo(new frm_CargarNota());
+            }
+            else
+            {
+                MessageBox.Show("No tiene materia asignada");
+            }
+
         }
 
         private void btn_CerrarUserProfesor_Click(object sender, EventArgs e)
@@ -73,5 +105,8 @@ namespace Arrua.Matias.Nahuel.Tp1
             frm_Login log = new frm_Login();
             log.ShowDialog();
         }
+        #endregion
+
+        
     }
 }

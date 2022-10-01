@@ -9,15 +9,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Arrua.Matias.Nahuel.Tp1.AdminPages;
+using TiposDeUsuarios;
 
 namespace Arrua.Matias.Nahuel.Tp1
 {
     public partial class frm_Admin : Form
     {
+       
         public frm_Admin()
         {
             InitializeComponent();
         }
+
+       
 
         #region Mover ventana
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -32,16 +36,6 @@ namespace Arrua.Matias.Nahuel.Tp1
         }
         #endregion
 
-        private void btn_Close_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btn_Minimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-
-        }
         private void AbrirFormHijo(Form formHijo)
         {
           if (this.pnl_Contenedor.Controls.Count > 0) {           
@@ -57,6 +51,18 @@ namespace Arrua.Matias.Nahuel.Tp1
            
         }
 
+        #region Buttons
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_Minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
         private void btn_AddAdmin_Click(object sender, EventArgs e)
         {
             AbrirFormHijo(new frm_AltaAdmin());
@@ -65,6 +71,7 @@ namespace Arrua.Matias.Nahuel.Tp1
         private void btn_AddAlumno_Click(object sender, EventArgs e)
         {
             AbrirFormHijo(new frm_AltaAlumno());
+            
         }
 
         private void btn_AddProfesor_Click(object sender, EventArgs e)
@@ -93,5 +100,9 @@ namespace Arrua.Matias.Nahuel.Tp1
             frm_Login log = new frm_Login();
             log.ShowDialog();
         }
+        #endregion
+
+
+
     }
 }

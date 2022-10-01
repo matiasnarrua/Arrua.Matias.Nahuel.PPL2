@@ -20,9 +20,9 @@ namespace TiposDeUsuarios
 
         public string Nombre { get => _nombre; set => _nombre = value; }
 
-        public override void PrecargarUsuarios(List<Type> lista)
+        public override void AgregarUsuario(string user, string pass, string nombre)
         {
-
+            Datos.listaAdmins.Add(new Admin(user.ToLower(), pass, Datos.HacerPrimerLetraMayus(nombre)));
         }
     }
 }

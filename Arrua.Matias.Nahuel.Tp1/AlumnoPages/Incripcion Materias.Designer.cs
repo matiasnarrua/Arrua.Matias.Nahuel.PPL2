@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.materiaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btn_AgregarMateria = new System.Windows.Forms.Button();
@@ -70,7 +73,7 @@
             // 
             // txt_AgregarMateria
             // 
-            this.txt_AgregarMateria.Location = new System.Drawing.Point(319, 159);
+            this.txt_AgregarMateria.Location = new System.Drawing.Point(354, 157);
             this.txt_AgregarMateria.Name = "txt_AgregarMateria";
             this.txt_AgregarMateria.PlaceholderText = "Ingrese Materia";
             this.txt_AgregarMateria.Size = new System.Drawing.Size(166, 22);
@@ -78,11 +81,28 @@
             // 
             // dgv_Materias
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Red;
+            this.dgv_Materias.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Materias.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Materias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Materias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Materias.Location = new System.Drawing.Point(32, 114);
+            this.dgv_Materias.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.dgv_Materias.Location = new System.Drawing.Point(12, 77);
             this.dgv_Materias.Name = "dgv_Materias";
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dgv_Materias.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Materias.RowTemplate.Height = 25;
-            this.dgv_Materias.Size = new System.Drawing.Size(240, 150);
+            this.dgv_Materias.Size = new System.Drawing.Size(334, 300);
             this.dgv_Materias.TabIndex = 5;
             // 
             // frm_IncripcionMaterias
