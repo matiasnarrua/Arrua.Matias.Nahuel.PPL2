@@ -151,9 +151,9 @@ namespace Arrua.Matias.Nahuel.Tp1
                 }
                 else if ((usuario.User == txt_Usuario.Text) && (usuario.Pass == txt_Pass.Text) && (usuario.GetType().ToString() == alumno.GetType().ToString()))
                 {
-                    
+                    alumno = Datos.DevolverAlumno(usuario.User, Datos.listaAlumnos);
                     this.Hide();
-                    frm_Alumno frm_alumno = new frm_Alumno();
+                    frm_Alumno frm_alumno = new frm_Alumno(alumno);
                     frm_alumno.Show();
                     break;
                 }

@@ -15,6 +15,7 @@ namespace TiposDeUsuarios
         public static List<Admin> listaAdmins = new List<Admin>();
         public static List<Profesor> listaProfesores = new List<Profesor>();
         public static List<Examen> listaExamenes = new List<Examen>();
+        public static List<string> listaPresentes = new List<string>();
         public static bool flag = true;
 
         #region Materias
@@ -25,12 +26,12 @@ namespace TiposDeUsuarios
         public static void HardcodearListaMaterias()
         {
 
-            CargarListaMaterias( "Matematica I", "Primero", "-"," ");
-            CargarListaMaterias("Laboratorio I","Primero","Felipe"," ");
-            CargarListaMaterias("Programacion I", "Primero", "Mario", " ");
-            CargarListaMaterias("Ingles I","Primero","-", " ");
-            CargarListaMaterias("Ingles II", "Segundo", "-"," Ingles I ");
-            CargarListaMaterias("Programacion II", "Segundo", "-", "Programacion I ");
+            CargarListaMaterias( "Matematica I", "Primero", "-","-");
+            CargarListaMaterias("Laboratorio I","Primero","Felipe","-");
+            CargarListaMaterias("Programacion I", "Primero", "Mario", "-");
+            CargarListaMaterias("Ingles I","Primero","-", "-");
+            CargarListaMaterias("Ingles II", "Segundo", "-","Ingles I");
+            CargarListaMaterias("Programacion II", "Segundo", "-", "Programacion I");
         }
               
        
@@ -38,21 +39,19 @@ namespace TiposDeUsuarios
 
         #region Alumnos
        
-         public static void CargarListaAlumnos(string user, string pass, string nombre, List<Materia> materiasCursadas)
+         public static void CargarListaAlumnos(string user, string pass, string nombre, string materiaCursada,int nota1,int nota2,EstadoDelAlumno estado)
         {
-            listaAlumnos.Add(new Alumno(user, pass, nombre, materiasCursadas));
+            listaAlumnos.Add(new Alumno(user, pass, nombre, materiaCursada,nota1,nota2,estado));
         }
 
         public static void HardcodearListaAlumnos()
         {
-            List<Materia> materiasCursadas = new List<Materia>();  
-            Materia materia = new Materia("Matematica I");            
-            materiasCursadas.Add(materia);
-            materia.Nombre = "Programacion I";
-            materiasCursadas.Add(materia);
-            CargarListaAlumnos("alumno1@utn.com", "alumno1", "Pedro",materiasCursadas );            
-            CargarListaAlumnos("alumno2@utn.com", "alumno2", "Carlos", materiasCursadas);
-            CargarListaAlumnos("alumno3@utn.com", "alumno3", "Camila", materiasCursadas);         
+                       
+            CargarListaAlumnos("alumno1@utn.com", "alumno1", "Pedro", "Programacion I",7 ,8, EstadoDelAlumno.Regular );
+            CargarListaAlumnos("alumno1@utn.com", "alumno1", "Pedro", "Laboratorio I", 4, 5,EstadoDelAlumno.Libre);
+            CargarListaAlumnos("alumno1@utn.com", "alumno1", "Pedro", "Matematica I",0,0,EstadoDelAlumno.SinEstado);
+            CargarListaAlumnos("alumno2@utn.com", "alumno2", "Carlos", "Matematica I",0,0, EstadoDelAlumno.SinEstado);
+            CargarListaAlumnos("alumno3@utn.com", "alumno3", "Camila", "-",0,0, EstadoDelAlumno.SinEstado);         
 
         }
        
@@ -89,7 +88,7 @@ namespace TiposDeUsuarios
             materia.Nombre = "Programacion I";
             CargarListaProfesor("profesor@utn.com", "profesor", "Mario", "Programacion I");
             materia.Nombre = "-";
-            CargarListaProfesor("profesor2@utn.com", "profesor2", "Felipe", "-");
+            CargarListaProfesor("profesor2@utn.com", "profesor2", "Felipe", "Laboratorio I");
             materia.Nombre = "-";
             CargarListaProfesor("profesor3@utn.com", "profesor3", "Daniel", "-");
             materia.Nombre = "-";
@@ -104,15 +103,15 @@ namespace TiposDeUsuarios
 
         #region Examenes
 
-        public static void CargarListaExamenes(string nombre, DateOnly fecha,string materia)
+        public static void CargarListaExamenes(string nombre, DateTime fecha,string materia)
         {
             listaExamenes.Add(new Examen(nombre, fecha, materia));
         }
         public static void HardcodearListaExamenes()
         {
-            DateOnly fecha = new DateOnly(2022, 04, 05);
-            DateOnly fecha2 = new DateOnly(2022, 04, 25);
-            CargarListaExamenes("Primer Parcial", fecha, "Programacion I ");
+            DateTime fecha = new DateTime(2022, 04, 05);
+            DateTime fecha2 = new DateTime(2022, 04, 25);
+            CargarListaExamenes("Primer Parcial", fecha, "Programacion I");
             CargarListaExamenes("Primer Parcial", fecha2, " ");
             
         }
@@ -185,6 +184,46 @@ namespace TiposDeUsuarios
                 }
             }
             return pf ;
+        }
+        public static Alumno DevolverAlumno(string user, List<Alumno> lista)
+        {
+            Alumno alum = new Alumno("", "");
+            foreach (Alumno alumno in lista)
+            {
+                if (alumno.User == user)
+                {
+                    return alumno;
+                }
+            }
+            return alum;
+        }
+        public static bool VerificarCantidadMaterias(List<Alumno> list  )
+        {
+            int count = 0;  
+            foreach (Alumno item in list)
+            {
+                count++;    
+            }
+            if(count >= 2)
+            {
+                return false;
+            }
+            return true;
+        }
+        public static List<Alumno> DevolverMateriasCursadas(Alumno alumno)
+        {
+            List<Alumno> listAux = new List<Alumno>();
+            Alumno alumnoAux = new Alumno("", "");
+
+            foreach (Alumno alumno1 in Datos.listaAlumnos)
+            {
+                if (alumno.User == alumno1.User)
+                {
+                    listAux.Add(alumno1);
+                }
+
+            }
+            return listAux;
         }
     }
 }

@@ -90,6 +90,14 @@ namespace Arrua.Matias.Nahuel.Tp1
         {
             if (profesor.MateriaAsignada != "-")
             {
+                foreach (Examen examen in Datos.listaExamenes)
+                {
+                    if(examen.Materia == this.profesor.MateriaAsignada)
+                    {
+                        ///TODO - Seguir desde aca
+                    }
+                }
+
                 AbrirFormHijo(new frm_CargarNota());
             }
             else

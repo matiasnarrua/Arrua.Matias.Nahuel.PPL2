@@ -30,7 +30,7 @@ namespace TiposDeUsuarios
 
         public override void AgregarUsuario(string user, string pass, string nombre)
         {
-            Datos.listaProfesores.Add(new Profesor(user.ToLower(), pass, Datos.HacerPrimerLetraMayus(nombre)));
+            Datos.listaProfesores.Add(new Profesor(user.ToLower(), pass, Datos.HacerPrimerLetraMayus(nombre),"-"));
         }
     }
 }

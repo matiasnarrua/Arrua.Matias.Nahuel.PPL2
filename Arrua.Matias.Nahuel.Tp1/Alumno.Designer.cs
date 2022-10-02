@@ -28,6 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_CerrarUserAlumno = new System.Windows.Forms.Button();
             this.btn_MinimizeAlumno = new System.Windows.Forms.PictureBox();
@@ -35,19 +42,28 @@
             this.btn_Minimize = new System.Windows.Forms.PictureBox();
             this.btn_Close = new System.Windows.Forms.PictureBox();
             this.pnl_Contenedor = new System.Windows.Forms.Panel();
+            this.dgv_MateriasCursadas = new System.Windows.Forms.DataGridView();
+            this.alumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_inicioAlumno = new System.Windows.Forms.Button();
             this.btn_DarPresente = new System.Windows.Forms.Button();
             this.btn_Inscripcion = new System.Windows.Forms.Button();
-            this.lbl_IdAlumno = new System.Windows.Forms.Label();
-            this.lbl_ApellidoAlumno = new System.Windows.Forms.Label();
-            this.lbl_NombreAlumno = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_User = new System.Windows.Forms.Label();
+            this.lbl_Nombre = new System.Windows.Forms.Label();
+            this.lbl_Alumno = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.materiaCursadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nota1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nota2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstadoDelAlumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MinimizeAlumno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_CloseAlumno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).BeginInit();
+            this.pnl_Contenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_MateriasCursadas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,27 +148,98 @@
             // 
             // pnl_Contenedor
             // 
-            this.pnl_Contenedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_Contenedor.Controls.Add(this.dgv_MateriasCursadas);
             this.pnl_Contenedor.Location = new System.Drawing.Point(178, 40);
             this.pnl_Contenedor.Name = "pnl_Contenedor";
             this.pnl_Contenedor.Size = new System.Drawing.Size(532, 412);
             this.pnl_Contenedor.TabIndex = 2;
             // 
+            // dgv_MateriasCursadas
+            // 
+            this.dgv_MateriasCursadas.AllowUserToAddRows = false;
+            this.dgv_MateriasCursadas.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.dgv_MateriasCursadas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_MateriasCursadas.AutoGenerateColumns = false;
+            this.dgv_MateriasCursadas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.dgv_MateriasCursadas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_MateriasCursadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_MateriasCursadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_MateriasCursadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.materiaCursadaDataGridViewTextBoxColumn,
+            this.Nota1,
+            this.Nota2,
+            this.EstadoDelAlumno});
+            this.dgv_MateriasCursadas.DataSource = this.alumnoBindingSource;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_MateriasCursadas.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_MateriasCursadas.Location = new System.Drawing.Point(21, 34);
+            this.dgv_MateriasCursadas.Name = "dgv_MateriasCursadas";
+            this.dgv_MateriasCursadas.ReadOnly = true;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_MateriasCursadas.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_MateriasCursadas.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_MateriasCursadas.RowTemplate.Height = 25;
+            this.dgv_MateriasCursadas.Size = new System.Drawing.Size(488, 342);
+            this.dgv_MateriasCursadas.TabIndex = 0;
+            // 
+            // alumnoBindingSource
+            // 
+            this.alumnoBindingSource.DataSource = typeof(TiposDeUsuarios.Alumno);
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.panel3.Controls.Add(this.btn_inicioAlumno);
             this.panel3.Controls.Add(this.btn_DarPresente);
             this.panel3.Controls.Add(this.btn_Inscripcion);
-            this.panel3.Controls.Add(this.lbl_IdAlumno);
-            this.panel3.Controls.Add(this.lbl_ApellidoAlumno);
-            this.panel3.Controls.Add(this.lbl_NombreAlumno);
-            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.lbl_User);
+            this.panel3.Controls.Add(this.lbl_Nombre);
+            this.panel3.Controls.Add(this.lbl_Alumno);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Location = new System.Drawing.Point(0, 40);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(178, 412);
             this.panel3.TabIndex = 3;
+            // 
+            // btn_inicioAlumno
+            // 
+            this.btn_inicioAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.btn_inicioAlumno.FlatAppearance.BorderSize = 0;
+            this.btn_inicioAlumno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.btn_inicioAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_inicioAlumno.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_inicioAlumno.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_inicioAlumno.Location = new System.Drawing.Point(8, 372);
+            this.btn_inicioAlumno.Name = "btn_inicioAlumno";
+            this.btn_inicioAlumno.Size = new System.Drawing.Size(163, 28);
+            this.btn_inicioAlumno.TabIndex = 18;
+            this.btn_inicioAlumno.Text = "Inicio";
+            this.btn_inicioAlumno.UseVisualStyleBackColor = false;
+            this.btn_inicioAlumno.Click += new System.EventHandler(this.btn_inicioAlumno_Click);
             // 
             // btn_DarPresente
             // 
@@ -186,45 +273,35 @@
             this.btn_Inscripcion.UseVisualStyleBackColor = false;
             this.btn_Inscripcion.Click += new System.EventHandler(this.btn_Inscripcion_Click);
             // 
-            // lbl_IdAlumno
+            // lbl_User
             // 
-            this.lbl_IdAlumno.AutoSize = true;
-            this.lbl_IdAlumno.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_IdAlumno.Location = new System.Drawing.Point(28, 68);
-            this.lbl_IdAlumno.Name = "lbl_IdAlumno";
-            this.lbl_IdAlumno.Size = new System.Drawing.Size(21, 17);
-            this.lbl_IdAlumno.TabIndex = 15;
-            this.lbl_IdAlumno.Text = "Id";
+            this.lbl_User.AutoSize = true;
+            this.lbl_User.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_User.Location = new System.Drawing.Point(28, 51);
+            this.lbl_User.Name = "lbl_User";
+            this.lbl_User.Size = new System.Drawing.Size(35, 17);
+            this.lbl_User.TabIndex = 15;
+            this.lbl_User.Text = "Mail";
             // 
-            // lbl_ApellidoAlumno
+            // lbl_Nombre
             // 
-            this.lbl_ApellidoAlumno.AutoSize = true;
-            this.lbl_ApellidoAlumno.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_ApellidoAlumno.Location = new System.Drawing.Point(28, 51);
-            this.lbl_ApellidoAlumno.Name = "lbl_ApellidoAlumno";
-            this.lbl_ApellidoAlumno.Size = new System.Drawing.Size(60, 17);
-            this.lbl_ApellidoAlumno.TabIndex = 14;
-            this.lbl_ApellidoAlumno.Text = "Apellido";
+            this.lbl_Nombre.AutoSize = true;
+            this.lbl_Nombre.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Nombre.Location = new System.Drawing.Point(28, 34);
+            this.lbl_Nombre.Name = "lbl_Nombre";
+            this.lbl_Nombre.Size = new System.Drawing.Size(59, 17);
+            this.lbl_Nombre.TabIndex = 13;
+            this.lbl_Nombre.Text = "Nombre";
             // 
-            // lbl_NombreAlumno
+            // lbl_Alumno
             // 
-            this.lbl_NombreAlumno.AutoSize = true;
-            this.lbl_NombreAlumno.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_NombreAlumno.Location = new System.Drawing.Point(28, 34);
-            this.lbl_NombreAlumno.Name = "lbl_NombreAlumno";
-            this.lbl_NombreAlumno.Size = new System.Drawing.Size(59, 17);
-            this.lbl_NombreAlumno.TabIndex = 13;
-            this.lbl_NombreAlumno.Text = "Nombre";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(28, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 22);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Alumno";
+            this.lbl_Alumno.AutoSize = true;
+            this.lbl_Alumno.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Alumno.Location = new System.Drawing.Point(28, 12);
+            this.lbl_Alumno.Name = "lbl_Alumno";
+            this.lbl_Alumno.Size = new System.Drawing.Size(75, 22);
+            this.lbl_Alumno.TabIndex = 12;
+            this.lbl_Alumno.Text = "Alumno";
             // 
             // panel5
             // 
@@ -233,6 +310,37 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(178, 2);
             this.panel5.TabIndex = 11;
+            // 
+            // materiaCursadaDataGridViewTextBoxColumn
+            // 
+            this.materiaCursadaDataGridViewTextBoxColumn.DataPropertyName = "MateriaCursada";
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.materiaCursadaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.materiaCursadaDataGridViewTextBoxColumn.HeaderText = "Materia Cursada";
+            this.materiaCursadaDataGridViewTextBoxColumn.Name = "materiaCursadaDataGridViewTextBoxColumn";
+            this.materiaCursadaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Nota1
+            // 
+            this.Nota1.DataPropertyName = "Nota1";
+            this.Nota1.HeaderText = "Primer nota";
+            this.Nota1.Name = "Nota1";
+            this.Nota1.ReadOnly = true;
+            // 
+            // Nota2
+            // 
+            this.Nota2.DataPropertyName = "Nota2";
+            this.Nota2.HeaderText = "Segunda nota";
+            this.Nota2.Name = "Nota2";
+            this.Nota2.ReadOnly = true;
+            // 
+            // EstadoDelAlumno
+            // 
+            this.EstadoDelAlumno.DataPropertyName = "EstadoDelAlumno";
+            this.EstadoDelAlumno.HeaderText = "Estado";
+            this.EstadoDelAlumno.Name = "EstadoDelAlumno";
+            this.EstadoDelAlumno.ReadOnly = true;
             // 
             // frm_Alumno
             // 
@@ -255,6 +363,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_CloseAlumno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).EndInit();
+            this.pnl_Contenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_MateriasCursadas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -271,12 +382,18 @@
         private Panel pnl_Contenedor;
         private Panel panel3;
         private Panel panel5;
-        private Label lbl_IdAlumno;
-        private Label lbl_ApellidoAlumno;
-        private Label lbl_NombreAlumno;
-        private Label label1;
+        private Label lbl_User;
+        private Label lbl_Nombre;
+        private Label lbl_Alumno;
         private Button btn_DarPresente;
         private Button btn_Inscripcion;
         private Button btn_CerrarUserAlumno;
+        private DataGridView dgv_MateriasCursadas;
+        private BindingSource alumnoBindingSource;
+        private Button btn_inicioAlumno;
+        private DataGridViewTextBoxColumn materiaCursadaDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn Nota1;
+        private DataGridViewTextBoxColumn Nota2;
+        private DataGridViewTextBoxColumn EstadoDelAlumno;
     }
 }

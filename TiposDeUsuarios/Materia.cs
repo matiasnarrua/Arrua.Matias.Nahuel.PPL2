@@ -11,7 +11,6 @@ namespace TiposDeUsuarios
         private string _nombre = "";
         private string _cuatrimestre="" ;
         private string _profesor = "";
-        private List<Alumno> _materiaAlumnos = new List<Alumno>();
         private string _materiaCorrelativa = "";
 
 
@@ -36,7 +35,7 @@ namespace TiposDeUsuarios
         public string Nombre { get => _nombre; set => _nombre = value; }      
         public string Cuatrimestre { get => _cuatrimestre; set => _cuatrimestre = value; }
         public string Profesor { get => _profesor; set => _profesor = value; }
-        public List<Alumno> MateriaAlumnos { get => _materiaAlumnos; set => _materiaAlumnos = value; }
+       
         public string MateriaCorrelativa { get => _materiaCorrelativa; set => _materiaCorrelativa = value; }
 
 

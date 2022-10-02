@@ -23,7 +23,6 @@ namespace Arrua.Matias.Nahuel.Tp1.AdminPages
         {
             CargarCmbs();
 
-
         }
         private void btn_Asignar_Click(object sender, EventArgs e)
         {
@@ -34,11 +33,6 @@ namespace Arrua.Matias.Nahuel.Tp1.AdminPages
             CargarCmbs();
 
         }
-
-
-
-
-
 
         private void CargarCmbs()
         {

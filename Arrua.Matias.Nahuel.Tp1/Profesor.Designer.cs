@@ -236,9 +236,9 @@
             this.lbl_UserProfesor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_UserProfesor.Location = new System.Drawing.Point(28, 54);
             this.lbl_UserProfesor.Name = "lbl_UserProfesor";
-            this.lbl_UserProfesor.Size = new System.Drawing.Size(21, 17);
+            this.lbl_UserProfesor.Size = new System.Drawing.Size(35, 17);
             this.lbl_UserProfesor.TabIndex = 15;
-            this.lbl_UserProfesor.Text = "Id";
+            this.lbl_UserProfesor.Text = "Mail";
             // 
             // lbl_NombreProfesor
             // 

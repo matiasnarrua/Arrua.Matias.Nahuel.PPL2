@@ -24,8 +24,9 @@ namespace Arrua.Matias.Nahuel.Tp1.ProfesorPages
             
             BindingSource bs = new BindingSource();
             
-            bs.DataSource = TraerExamenDeSuMateria(profesor1);
+            bs.DataSource = TraerExamenDeSuMateria(profesor);
             dgv_Examenes.DataSource = bs;
+           
         }
 
 
@@ -34,19 +35,34 @@ namespace Arrua.Matias.Nahuel.Tp1.ProfesorPages
             List<Examen> listaExamenes = new List<Examen>();
 
             foreach (Examen examen in Datos.listaExamenes)
-            {
-                if(examen.Materia == profesor1.MateriaAsignada)
-                {
-                    
+            {              
+                if (examen.Materia == profesor.MateriaAsignada)
+                {                    
                     listaExamenes.Add(examen);
                 }
             }
+            
             return listaExamenes;
         }
 
-        ///TODO -- fehca en int dia mes y anio y fecha completa, todo eso
-        ///TODO
-        
+        private void btn_aceptar_Click(object sender, EventArgs e)
+        {
+            Examen examen = new Examen();
+            examen.Nombre = txt_Nombre.Text;
+            examen.Fecha = dtp_fecha.Value;
+            examen.Materia = profesor1.MateriaAsignada;
+            Datos.listaExamenes.Add(examen);
+            BindingSource bs = new BindingSource();
+
+            bs.DataSource = TraerExamenDeSuMateria(profesor1);
+            dgv_Examenes.DataSource = bs;
+
+
+
+        }
+
+
+
     }
 
 

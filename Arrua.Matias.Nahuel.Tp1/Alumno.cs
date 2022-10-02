@@ -11,17 +11,28 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Arrua.Matias.Nahuel.Tp1.AlumnoPages;
 using TiposDeUsuarios;
-
+using System.Globalization;
 
 namespace Arrua.Matias.Nahuel.Tp1
 {
     public partial class frm_Alumno : Form
     {
-       
+        Alumno alumno = new Alumno("", "");
         public frm_Alumno()
-        {
+        {            
             InitializeComponent();
         }
+        public frm_Alumno(Alumno alum) : this()
+        {
+            this.alumno = alum;            
+            lbl_Nombre.Text = alum.Nombre;
+            lbl_User.Text = alum.User;
+                                   
+            dgv_MateriasCursadas.DataSource = Datos.DevolverMateriasCursadas(alum);
+
+
+        }
+
             
         #region Mover ventana
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -52,16 +63,6 @@ namespace Arrua.Matias.Nahuel.Tp1
 
         }
 
-        private void btn_Inscripcion_Click(object sender, EventArgs e)
-        {
-            AbrirFormHijo(new frm_IncripcionMaterias());
-        }
-
-        private void btn_DarPresente_Click(object sender, EventArgs e)
-        {
-            AbrirFormHijo(new frm_DarPresente());
-        }
-
         private void btn_MinimizeAlumno_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -78,6 +79,31 @@ namespace Arrua.Matias.Nahuel.Tp1
             this.Hide();
             frm_Login log = new frm_Login();
             log.ShowDialog();
+        }
+        private void btn_Inscripcion_Click(object sender, EventArgs e)
+        {
+            ///TODO -5 Sacar lo comentado
+            //if (Datos.VerificarCantidadMaterias(Datos.DevolverMateriasCursadas(this.alumno))){
+
+            AbrirFormHijo(new frm_InscripcionMaterias(this.alumno));
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Solo podes estar inscripto a dos materias");
+            //}
+        }
+
+        private void btn_DarPresente_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new frm_DarPresente(this.alumno));
+        }
+
+
+        private void btn_inicioAlumno_Click(object sender, EventArgs e)
+        {
+
+            AbrirFormHijo(new frm_AlumnoInicio(this.alumno));
+
         }
     }
 }
