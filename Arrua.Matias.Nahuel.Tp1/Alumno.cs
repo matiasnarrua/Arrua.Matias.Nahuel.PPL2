@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using Arrua.Matias.Nahuel.Tp1.AlumnoPages;
 using TiposDeUsuarios;
 using System.Globalization;
+using System.Runtime.CompilerServices;
 
 namespace Arrua.Matias.Nahuel.Tp1
 {
@@ -19,21 +20,22 @@ namespace Arrua.Matias.Nahuel.Tp1
     {
         Alumno alumno = new Alumno("", "");
         public frm_Alumno()
-        {            
+        {
             InitializeComponent();
         }
         public frm_Alumno(Alumno alum) : this()
         {
-            this.alumno = alum;            
+            this.alumno = alum;
             lbl_Nombre.Text = alum.Nombre;
             lbl_User.Text = alum.User;
-                                   
-            dgv_MateriasCursadas.DataSource = Datos.DevolverMateriasCursadas(alum);
-
+            
+            BindingSource bs = new BindingSource();           
+            bs.DataSource = CargarEstadoMaterias(Datos.DevolverMateriasCursadas(alum));
+            dgv_MateriasCursadas.DataSource = bs;
 
         }
 
-            
+
         #region Mover ventana
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -47,22 +49,7 @@ namespace Arrua.Matias.Nahuel.Tp1
         }
         #endregion
 
-        
-        private void AbrirFormHijo(Form formHijo)
-        {
-            if (this.pnl_Contenedor.Controls.Count > 0)
-            {
-                this.pnl_Contenedor.Controls.RemoveAt(0);
-            }
-            Form fh = formHijo;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.pnl_Contenedor.Controls.Add(fh);
-            this.pnl_Contenedor.Tag = fh;
-            fh.Show();
-
-        }
-
+        #region buttons
         private void btn_MinimizeAlumno_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -70,7 +57,7 @@ namespace Arrua.Matias.Nahuel.Tp1
 
         private void btn_CloseAlumno_Click(object sender, EventArgs e)
         {
-            
+
             Application.Exit();
         }
 
@@ -105,5 +92,48 @@ namespace Arrua.Matias.Nahuel.Tp1
             AbrirFormHijo(new frm_AlumnoInicio(this.alumno));
 
         }
+
+        #endregion
+
+        private void AbrirFormHijo(Form formHijo)
+        {
+            if (this.pnl_Contenedor.Controls.Count > 0)
+            {
+                this.pnl_Contenedor.Controls.RemoveAt(0);
+            }
+            Form fh = formHijo;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.pnl_Contenedor.Controls.Add(fh);
+            this.pnl_Contenedor.Tag = fh;
+            fh.Show();
+
+        }
+        
+        private  List<Alumno> CargarEstadoMaterias(List<Alumno> lista)
+        {                     
+           foreach (Alumno alum in lista)
+            {
+              if (alum == 6 && alum.ExamenNota !=0 && alum.EstadoDelAlumno == TiposDeUsuarios.EstadoDelAlumno.Regular)
+               { 
+                    alum.EstadoMateria = "Aprobada";
+                        
+               }
+               else if(alum!= 6 && alum.ExamenNota != 0)
+                {
+                   alum.EstadoMateria = "Desaprobada";       
+                }
+            }
+
+            return lista;            
+        }   
+        
+        /// Hacer una funcion que si le paso 7omas y la condicion regular cambien todo a aprobado
+        /// si le paso 7 o menos pase todo a desaprobado
+        /// en la lista de inscripcion a materias llamar a lista de materias para cargar combo box y 
+        /// al hacer click verifique si la materia correlativa esta arpobada para ahi dar el ok 
+
     }
+
 }
+

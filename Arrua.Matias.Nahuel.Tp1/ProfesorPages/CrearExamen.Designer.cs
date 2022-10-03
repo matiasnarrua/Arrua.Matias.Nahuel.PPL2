@@ -34,13 +34,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_Examenes = new System.Windows.Forms.DataGridView();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.examenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dtp_fecha = new System.Windows.Forms.DateTimePicker();
             this.txt_Nombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_aceptar = new System.Windows.Forms.Button();
-            this.examenBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Examenes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.examenBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -100,6 +100,24 @@
             this.dgv_Examenes.Size = new System.Drawing.Size(302, 300);
             this.dgv_Examenes.TabIndex = 5;
             // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaDataGridViewTextBoxColumn
+            // 
+            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+            this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // examenBindingSource
+            // 
+            this.examenBindingSource.DataSource = typeof(TiposDeUsuarios.Examen);
+            // 
             // dtp_fecha
             // 
             this.dtp_fecha.Location = new System.Drawing.Point(320, 104);
@@ -108,6 +126,7 @@
             this.dtp_fecha.Name = "dtp_fecha";
             this.dtp_fecha.Size = new System.Drawing.Size(200, 23);
             this.dtp_fecha.TabIndex = 6;
+            this.dtp_fecha.Value = new System.DateTime(2022, 10, 2, 0, 0, 0, 0);
             // 
             // txt_Nombre
             // 
@@ -136,24 +155,6 @@
             this.btn_aceptar.Text = "Aceptar";
             this.btn_aceptar.UseVisualStyleBackColor = true;
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
-            // 
-            // examenBindingSource
-            // 
-            this.examenBindingSource.DataSource = typeof(TiposDeUsuarios.Examen);
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechaDataGridViewTextBoxColumn
-            // 
-            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
-            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
-            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
-            this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // frm_CrearExamen
             // 

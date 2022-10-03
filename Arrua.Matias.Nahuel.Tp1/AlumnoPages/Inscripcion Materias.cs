@@ -21,14 +21,14 @@ namespace Arrua.Matias.Nahuel.Tp1.AlumnoPages
         public frm_InscripcionMaterias()
         {
             InitializeComponent();
-            
+
         }
         public frm_InscripcionMaterias(Alumno alumno1) : this()
         {
             this.alumno = alumno1;
 
-            CargarCmbs(alumno);
-
+            // CargarCmbs(alumno);
+            CargarCmbs();
         }
 
 
@@ -38,54 +38,27 @@ namespace Arrua.Matias.Nahuel.Tp1.AlumnoPages
         }
 
         private void btn_Inscribirse_Click(object sender, EventArgs e)
-        {
-            
-          
+        {            
             if (MessageBox.Show($"Se va a inscribir en{cmb_Materias.Text}. Esta seguro?", Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 alumno.MateriaCursada = cmb_Materias.Text;
-                alumno.Nota2 = 0;
-                alumno.Nota1 = 0;
+
                 alumno.EstadoDelAlumno = EstadoDelAlumno.SinEstado;
                 Datos.listaAlumnos.Add(alumno);
 
             }
-            
-            
+
         }
-
-
-        ///TODO - 8 Tiene que estar aprobada la materia para podes inscribirse, No tiene que ser regular
-        ///mostrar todas las materias y en caso de querer anotarse en una, donde su correlativa esta desaprobada no dejar anotarse
-        
-        private void CargarCmbs(Alumno alumno)
+                        
+        private void CargarCmbs()
         {
-            List<Alumno> list = new List<Alumno>();
-            list = Datos.DevolverMateriasCursadas(alumno);
-
-            foreach (Alumno alum in list)
+            foreach (Materia materia in Datos.listaMaterias)
             {
-                foreach (Materia materia in Datos.listaMaterias)
-                {
-                    if(materia.MateriaCorrelativa == "-")
-                    {
-                        if(materia.Nombre != alum.MateriaCursada)
-                        {
-                            cmb_Materias.Items.Add(materia.Nombre);
-                        }
-                    }
-                    else if(materia.MateriaCorrelativa != "-" && EstadoDelAlumno.Regular == alum.EstadoDelAlumno )
-                    {
-                        if (materia.Nombre != alum.MateriaCursada)
-                        {
-                            cmb_Materias.Items.Add(materia.Nombre);
-                        }
-                    }
-                    
-                }
+              cmb_Materias.Items.Add ( materia.Nombre);
             }
-
         }
+
+
 
     }
 }

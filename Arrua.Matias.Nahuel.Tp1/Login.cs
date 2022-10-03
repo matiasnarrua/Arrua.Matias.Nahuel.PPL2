@@ -135,7 +135,7 @@ namespace Arrua.Matias.Nahuel.Tp1
         }
         public void LoginUsuario(List<Usuario> list)
         {
-
+            int i = 0;
             foreach (Usuario usuario in list)
             {
                 Admin admin = new Admin("", "");
@@ -147,6 +147,7 @@ namespace Arrua.Matias.Nahuel.Tp1
                     this.Hide();
                     frm_Admin frm_admin = new frm_Admin();
                     frm_admin.Show();
+                    i = 1;
                     break;
                 }
                 else if ((usuario.User == txt_Usuario.Text) && (usuario.Pass == txt_Pass.Text) && (usuario.GetType().ToString() == alumno.GetType().ToString()))
@@ -155,27 +156,23 @@ namespace Arrua.Matias.Nahuel.Tp1
                     this.Hide();
                     frm_Alumno frm_alumno = new frm_Alumno(alumno);
                     frm_alumno.Show();
+                    i = 1;
                     break;
                 }
                 else if ((usuario.User == txt_Usuario.Text) && (usuario.Pass == txt_Pass.Text) && (usuario.GetType().ToString() == profesor.GetType().ToString()))
                 {
+                    i = 1;
                     profesor = Datos.DevolverProfesor(usuario.User, Datos.listaProfesores);
                     this.Hide();
                     frm_Profesor frm_profesor = new frm_Profesor(profesor);
                     frm_profesor.Show();
                     break;
-                }
-               /* else
-                {
+                }       
+
+            }
+            if (i == 0)
+            {
                     MensajeDeErrorContaseña();
-                    if (txt_Usuario.Text  == String.Empty  || txt_Pass.Text == String.Empty || usuario.Pass != txt_Pass.Text)
-                    {
-                        break;
-                    }
-
-
-                }*/
-
             }
         }
         

@@ -29,23 +29,31 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_Title = new System.Windows.Forms.Label();
-            this.btn_CargarNota1 = new System.Windows.Forms.Button();
-            this.btn_CargarNota2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lbl_Examen1 = new System.Windows.Forms.Label();
+            this.btn_CargarNota = new System.Windows.Forms.Button();
+            this.lbl_Examen = new System.Windows.Forms.Label();
             this.lbl_Examen2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.alumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.lbl_UserrAlumno = new System.Windows.Forms.Label();
+            this.dgv_Alumnos = new System.Windows.Forms.DataGridView();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nota1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nota2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.ExamenNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExamenNota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materiaCursadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alumnoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.alumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txt_Usuario = new System.Windows.Forms.TextBox();
+            this.lbl_UserrAlumno = new System.Windows.Forms.Label();
+            this.alumnoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cmb_Examen = new System.Windows.Forms.ComboBox();
+            this.cmb_Nota = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Alumnos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Title
@@ -59,92 +67,136 @@
             this.lbl_Title.TabIndex = 2;
             this.lbl_Title.Text = "Cargar notas";
             // 
-            // btn_CargarNota1
+            // btn_CargarNota
             // 
-            this.btn_CargarNota1.Location = new System.Drawing.Point(239, 347);
-            this.btn_CargarNota1.Name = "btn_CargarNota1";
-            this.btn_CargarNota1.Size = new System.Drawing.Size(100, 23);
-            this.btn_CargarNota1.TabIndex = 3;
-            this.btn_CargarNota1.Text = "Cargar Nota";
-            this.btn_CargarNota1.UseVisualStyleBackColor = true;
+            this.btn_CargarNota.Location = new System.Drawing.Point(384, 346);
+            this.btn_CargarNota.Name = "btn_CargarNota";
+            this.btn_CargarNota.Size = new System.Drawing.Size(100, 23);
+            this.btn_CargarNota.TabIndex = 4;
+            this.btn_CargarNota.Text = "Cargar Nota";
+            this.btn_CargarNota.UseVisualStyleBackColor = true;
+            this.btn_CargarNota.Click += new System.EventHandler(this.btn_CargarNota_Click);
             // 
-            // btn_CargarNota2
+            // lbl_Examen
             // 
-            this.btn_CargarNota2.Location = new System.Drawing.Point(374, 347);
-            this.btn_CargarNota2.Name = "btn_CargarNota2";
-            this.btn_CargarNota2.Size = new System.Drawing.Size(100, 23);
-            this.btn_CargarNota2.TabIndex = 4;
-            this.btn_CargarNota2.Text = "Cargar Nota";
-            this.btn_CargarNota2.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(239, 318);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(374, 318);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 6;
-            // 
-            // lbl_Examen1
-            // 
-            this.lbl_Examen1.AutoSize = true;
-            this.lbl_Examen1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_Examen1.ForeColor = System.Drawing.SystemColors.Window;
-            this.lbl_Examen1.Location = new System.Drawing.Point(239, 295);
-            this.lbl_Examen1.Name = "lbl_Examen1";
-            this.lbl_Examen1.Size = new System.Drawing.Size(50, 20);
-            this.lbl_Examen1.TabIndex = 7;
-            this.lbl_Examen1.Text = "label2";
+            this.lbl_Examen.AutoSize = true;
+            this.lbl_Examen.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Examen.ForeColor = System.Drawing.SystemColors.Window;
+            this.lbl_Examen.Location = new System.Drawing.Point(250, 295);
+            this.lbl_Examen.Name = "lbl_Examen";
+            this.lbl_Examen.Size = new System.Drawing.Size(61, 20);
+            this.lbl_Examen.TabIndex = 7;
+            this.lbl_Examen.Text = "Examen";
             // 
             // lbl_Examen2
             // 
             this.lbl_Examen2.AutoSize = true;
             this.lbl_Examen2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_Examen2.ForeColor = System.Drawing.SystemColors.Window;
-            this.lbl_Examen2.Location = new System.Drawing.Point(374, 295);
+            this.lbl_Examen2.Location = new System.Drawing.Point(388, 295);
             this.lbl_Examen2.Name = "lbl_Examen2";
-            this.lbl_Examen2.Size = new System.Drawing.Size(50, 20);
+            this.lbl_Examen2.Size = new System.Drawing.Size(86, 20);
             this.lbl_Examen2.TabIndex = 8;
-            this.lbl_Examen2.Text = "label2";
+            this.lbl_Examen2.Text = "Calificacion";
             // 
-            // dataGridView1
+            // dgv_Alumnos
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_Alumnos.AllowUserToAddRows = false;
+            this.dgv_Alumnos.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.dgv_Alumnos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Alumnos.AutoGenerateColumns = false;
+            this.dgv_Alumnos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.dgv_Alumnos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Alumnos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_Alumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Alumnos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombreDataGridViewTextBoxColumn,
             this.userDataGridViewTextBoxColumn,
-            this.nota1DataGridViewTextBoxColumn,
-            this.nota2DataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.alumnoBindingSource;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.Window;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 65);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(508, 213);
-            this.dataGridView1.TabIndex = 9;
+            this.ExamenNombre,
+            this.ExamenNota,
+            this.materiaCursadaDataGridViewTextBoxColumn});
+            this.dgv_Alumnos.DataSource = this.alumnoBindingSource2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Alumnos.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_Alumnos.GridColor = System.Drawing.SystemColors.Window;
+            this.dgv_Alumnos.Location = new System.Drawing.Point(12, 65);
+            this.dgv_Alumnos.Name = "dgv_Alumnos";
+            this.dgv_Alumnos.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Alumnos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_Alumnos.RowTemplate.Height = 25;
+            this.dgv_Alumnos.Size = new System.Drawing.Size(508, 213);
+            this.dgv_Alumnos.TabIndex = 9;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // userDataGridViewTextBoxColumn
+            // 
+            this.userDataGridViewTextBoxColumn.DataPropertyName = "User";
+            this.userDataGridViewTextBoxColumn.HeaderText = "Usuario";
+            this.userDataGridViewTextBoxColumn.Name = "userDataGridViewTextBoxColumn";
+            this.userDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ExamenNombre
+            // 
+            this.ExamenNombre.DataPropertyName = "ExamenNombre";
+            this.ExamenNombre.HeaderText = "Examen";
+            this.ExamenNombre.Name = "ExamenNombre";
+            this.ExamenNombre.ReadOnly = true;
+            // 
+            // ExamenNota
+            // 
+            this.ExamenNota.DataPropertyName = "ExamenNota";
+            this.ExamenNota.HeaderText = "Calificacion";
+            this.ExamenNota.Name = "ExamenNota";
+            this.ExamenNota.ReadOnly = true;
+            // 
+            // materiaCursadaDataGridViewTextBoxColumn
+            // 
+            this.materiaCursadaDataGridViewTextBoxColumn.DataPropertyName = "MateriaCursada";
+            this.materiaCursadaDataGridViewTextBoxColumn.HeaderText = "Materia";
+            this.materiaCursadaDataGridViewTextBoxColumn.Name = "materiaCursadaDataGridViewTextBoxColumn";
+            this.materiaCursadaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // alumnoBindingSource2
+            // 
+            this.alumnoBindingSource2.DataSource = typeof(TiposDeUsuarios.Alumno);
             // 
             // alumnoBindingSource
             // 
             this.alumnoBindingSource.DataSource = typeof(TiposDeUsuarios.Alumno);
             // 
-            // textBox3
+            // txt_Usuario
             // 
-            this.textBox3.Location = new System.Drawing.Point(27, 318);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(164, 23);
-            this.textBox3.TabIndex = 10;
+            this.txt_Usuario.Location = new System.Drawing.Point(27, 318);
+            this.txt_Usuario.Name = "txt_Usuario";
+            this.txt_Usuario.Size = new System.Drawing.Size(164, 23);
+            this.txt_Usuario.TabIndex = 10;
             // 
             // lbl_UserrAlumno
             // 
@@ -157,33 +209,27 @@
             this.lbl_UserrAlumno.TabIndex = 11;
             this.lbl_UserrAlumno.Text = "Usuario del Alumno";
             // 
-            // nombreDataGridViewTextBoxColumn
+            // alumnoBindingSource1
             // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.alumnoBindingSource1.DataSource = typeof(TiposDeUsuarios.Alumno);
             // 
-            // userDataGridViewTextBoxColumn
+            // cmb_Examen
             // 
-            this.userDataGridViewTextBoxColumn.DataPropertyName = "User";
-            this.userDataGridViewTextBoxColumn.HeaderText = "User";
-            this.userDataGridViewTextBoxColumn.Name = "userDataGridViewTextBoxColumn";
-            this.userDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cmb_Examen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Examen.FormattingEnabled = true;
+            this.cmb_Examen.Location = new System.Drawing.Point(220, 318);
+            this.cmb_Examen.Name = "cmb_Examen";
+            this.cmb_Examen.Size = new System.Drawing.Size(128, 23);
+            this.cmb_Examen.TabIndex = 12;
             // 
-            // nota1DataGridViewTextBoxColumn
+            // cmb_Nota
             // 
-            this.nota1DataGridViewTextBoxColumn.DataPropertyName = "Nota1";
-            this.nota1DataGridViewTextBoxColumn.HeaderText = "Nota1";
-            this.nota1DataGridViewTextBoxColumn.Name = "nota1DataGridViewTextBoxColumn";
-            this.nota1DataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nota2DataGridViewTextBoxColumn
-            // 
-            this.nota2DataGridViewTextBoxColumn.DataPropertyName = "Nota2";
-            this.nota2DataGridViewTextBoxColumn.HeaderText = "Nota2";
-            this.nota2DataGridViewTextBoxColumn.Name = "nota2DataGridViewTextBoxColumn";
-            this.nota2DataGridViewTextBoxColumn.ReadOnly = true;
+            this.cmb_Nota.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Nota.FormattingEnabled = true;
+            this.cmb_Nota.Location = new System.Drawing.Point(374, 318);
+            this.cmb_Nota.Name = "cmb_Nota";
+            this.cmb_Nota.Size = new System.Drawing.Size(121, 23);
+            this.cmb_Nota.TabIndex = 13;
             // 
             // frm_CargarNota
             // 
@@ -191,21 +237,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(532, 412);
+            this.Controls.Add(this.cmb_Nota);
+            this.Controls.Add(this.cmb_Examen);
             this.Controls.Add(this.lbl_UserrAlumno);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.txt_Usuario);
+            this.Controls.Add(this.dgv_Alumnos);
             this.Controls.Add(this.lbl_Examen2);
-            this.Controls.Add(this.lbl_Examen1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.btn_CargarNota2);
-            this.Controls.Add(this.btn_CargarNota1);
+            this.Controls.Add(this.lbl_Examen);
+            this.Controls.Add(this.btn_CargarNota);
             this.Controls.Add(this.lbl_Title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_CargarNota";
-            this.Text = "CargarNota";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "UTN App";
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Alumnos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,19 +261,22 @@
         #endregion
 
         private Label lbl_Title;
-        private Button btn_CargarNota1;
-        private Button btn_CargarNota2;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Label lbl_Examen1;
+        private Button btn_CargarNota;
+        private Label lbl_Examen;
         private Label lbl_Examen2;
-        private DataGridView dataGridView1;
+        private DataGridView dgv_Alumnos;
+        private BindingSource alumnoBindingSource;
+        private TextBox txt_Usuario;
+        private Label lbl_UserrAlumno;
+        private BindingSource alumnoBindingSource1;
+        
+        private BindingSource alumnoBindingSource2;
+        private ComboBox cmb_Examen;
+        private ComboBox cmb_Nota;
         private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn userDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn nota1DataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn nota2DataGridViewTextBoxColumn;
-        private BindingSource alumnoBindingSource;
-        private TextBox textBox3;
-        private Label lbl_UserrAlumno;
+        private DataGridViewTextBoxColumn ExamenNombre;
+        private DataGridViewTextBoxColumn ExamenNota;
+        private DataGridViewTextBoxColumn materiaCursadaDataGridViewTextBoxColumn;
     }
 }

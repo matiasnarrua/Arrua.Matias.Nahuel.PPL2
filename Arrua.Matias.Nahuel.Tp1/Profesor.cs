@@ -20,10 +20,10 @@ namespace Arrua.Matias.Nahuel.Tp1
         public frm_Profesor()
         {
             InitializeComponent();
-            
+
 
         }
-       
+
         public frm_Profesor(Profesor profesor) : this()
         {
             this.profesor = profesor;
@@ -32,7 +32,7 @@ namespace Arrua.Matias.Nahuel.Tp1
             lbl_Materia.Text = profesor.MateriaAsignada;
 
         }
-       
+
 
         #region Mover ventana
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -75,7 +75,7 @@ namespace Arrua.Matias.Nahuel.Tp1
 
         private void btn_CrearExamen_Click(object sender, EventArgs e)
         {
-            if (profesor.MateriaAsignada!= "-")
+            if (profesor.MateriaAsignada != "-")
             {
                 AbrirFormHijo(new frm_CrearExamen(profesor));
             }
@@ -83,7 +83,7 @@ namespace Arrua.Matias.Nahuel.Tp1
             {
                 MessageBox.Show("No tiene materia asignada");
             }
-                   
+
         }
 
         private void btn_CargarNota_Click(object sender, EventArgs e)
@@ -92,13 +92,13 @@ namespace Arrua.Matias.Nahuel.Tp1
             {
                 foreach (Examen examen in Datos.listaExamenes)
                 {
-                    if(examen.Materia == this.profesor.MateriaAsignada)
+                    if (examen.Materia == this.profesor.MateriaAsignada)
                     {
-                        ///TODO - Seguir desde aca
+                        AbrirFormHijo(new frm_CargarNota(this.profesor));
                     }
                 }
 
-                AbrirFormHijo(new frm_CargarNota());
+
             }
             else
             {
@@ -115,6 +115,6 @@ namespace Arrua.Matias.Nahuel.Tp1
         }
         #endregion
 
-        
+
     }
 }

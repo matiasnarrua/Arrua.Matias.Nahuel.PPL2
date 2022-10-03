@@ -43,6 +43,11 @@
             this.btn_Close = new System.Windows.Forms.PictureBox();
             this.pnl_Contenedor = new System.Windows.Forms.Panel();
             this.dgv_MateriasCursadas = new System.Windows.Forms.DataGridView();
+            this.materiaCursadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExamenNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExamenNota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstadoMateria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstadoDelAlumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_inicioAlumno = new System.Windows.Forms.Button();
@@ -52,10 +57,6 @@
             this.lbl_Nombre = new System.Windows.Forms.Label();
             this.lbl_Alumno = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.materiaCursadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nota1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nota2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstadoDelAlumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MinimizeAlumno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_CloseAlumno)).BeginInit();
@@ -149,9 +150,9 @@
             // pnl_Contenedor
             // 
             this.pnl_Contenedor.Controls.Add(this.dgv_MateriasCursadas);
-            this.pnl_Contenedor.Location = new System.Drawing.Point(178, 40);
+            this.pnl_Contenedor.Location = new System.Drawing.Point(177, 40);
             this.pnl_Contenedor.Name = "pnl_Contenedor";
-            this.pnl_Contenedor.Size = new System.Drawing.Size(532, 412);
+            this.pnl_Contenedor.Size = new System.Drawing.Size(533, 409);
             this.pnl_Contenedor.TabIndex = 2;
             // 
             // dgv_MateriasCursadas
@@ -175,8 +176,9 @@
             this.dgv_MateriasCursadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_MateriasCursadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.materiaCursadaDataGridViewTextBoxColumn,
-            this.Nota1,
-            this.Nota2,
+            this.ExamenNombre,
+            this.ExamenNota,
+            this.EstadoMateria,
             this.EstadoDelAlumno});
             this.dgv_MateriasCursadas.DataSource = this.alumnoBindingSource;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -205,6 +207,44 @@
             this.dgv_MateriasCursadas.RowTemplate.Height = 25;
             this.dgv_MateriasCursadas.Size = new System.Drawing.Size(488, 342);
             this.dgv_MateriasCursadas.TabIndex = 0;
+            // 
+            // materiaCursadaDataGridViewTextBoxColumn
+            // 
+            this.materiaCursadaDataGridViewTextBoxColumn.DataPropertyName = "MateriaCursada";
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.materiaCursadaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.materiaCursadaDataGridViewTextBoxColumn.HeaderText = "Materia Cursada";
+            this.materiaCursadaDataGridViewTextBoxColumn.Name = "materiaCursadaDataGridViewTextBoxColumn";
+            this.materiaCursadaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ExamenNombre
+            // 
+            this.ExamenNombre.DataPropertyName = "ExamenNombre";
+            this.ExamenNombre.HeaderText = "Examen";
+            this.ExamenNombre.Name = "ExamenNombre";
+            this.ExamenNombre.ReadOnly = true;
+            // 
+            // ExamenNota
+            // 
+            this.ExamenNota.DataPropertyName = "ExamenNota";
+            this.ExamenNota.HeaderText = "Calificacion";
+            this.ExamenNota.Name = "ExamenNota";
+            this.ExamenNota.ReadOnly = true;
+            // 
+            // EstadoMateria
+            // 
+            this.EstadoMateria.DataPropertyName = "EstadoMateria";
+            this.EstadoMateria.HeaderText = "Estado Materia";
+            this.EstadoMateria.Name = "EstadoMateria";
+            this.EstadoMateria.ReadOnly = true;
+            // 
+            // EstadoDelAlumno
+            // 
+            this.EstadoDelAlumno.DataPropertyName = "EstadoDelAlumno";
+            this.EstadoDelAlumno.HeaderText = "Estado";
+            this.EstadoDelAlumno.Name = "EstadoDelAlumno";
+            this.EstadoDelAlumno.ReadOnly = true;
             // 
             // alumnoBindingSource
             // 
@@ -311,37 +351,6 @@
             this.panel5.Size = new System.Drawing.Size(178, 2);
             this.panel5.TabIndex = 11;
             // 
-            // materiaCursadaDataGridViewTextBoxColumn
-            // 
-            this.materiaCursadaDataGridViewTextBoxColumn.DataPropertyName = "MateriaCursada";
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.materiaCursadaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.materiaCursadaDataGridViewTextBoxColumn.HeaderText = "Materia Cursada";
-            this.materiaCursadaDataGridViewTextBoxColumn.Name = "materiaCursadaDataGridViewTextBoxColumn";
-            this.materiaCursadaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Nota1
-            // 
-            this.Nota1.DataPropertyName = "Nota1";
-            this.Nota1.HeaderText = "Primer nota";
-            this.Nota1.Name = "Nota1";
-            this.Nota1.ReadOnly = true;
-            // 
-            // Nota2
-            // 
-            this.Nota2.DataPropertyName = "Nota2";
-            this.Nota2.HeaderText = "Segunda nota";
-            this.Nota2.Name = "Nota2";
-            this.Nota2.ReadOnly = true;
-            // 
-            // EstadoDelAlumno
-            // 
-            this.EstadoDelAlumno.DataPropertyName = "EstadoDelAlumno";
-            this.EstadoDelAlumno.HeaderText = "Estado";
-            this.EstadoDelAlumno.Name = "EstadoDelAlumno";
-            this.EstadoDelAlumno.ReadOnly = true;
-            // 
             // frm_Alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -356,7 +365,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Alumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Alumno";
+            this.Text = "UTN Alumno";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MinimizeAlumno)).EndInit();
@@ -392,8 +401,9 @@
         private BindingSource alumnoBindingSource;
         private Button btn_inicioAlumno;
         private DataGridViewTextBoxColumn materiaCursadaDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn Nota1;
-        private DataGridViewTextBoxColumn Nota2;
+        private DataGridViewTextBoxColumn ExamenNombre;
+        private DataGridViewTextBoxColumn ExamenNota;
+        private DataGridViewTextBoxColumn EstadoMateria;
         private DataGridViewTextBoxColumn EstadoDelAlumno;
     }
 }

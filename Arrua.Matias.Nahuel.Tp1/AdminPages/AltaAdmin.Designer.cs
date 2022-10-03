@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -41,7 +42,12 @@
             this.lbl_Nombre = new System.Windows.Forms.Label();
             this.lbl_Pass = new System.Windows.Forms.Label();
             this.lbl_User = new System.Windows.Forms.Label();
+            this.adminBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Titulo
@@ -80,6 +86,7 @@
             // 
             this.dgv_Usuarios.AllowUserToAddRows = false;
             this.dgv_Usuarios.AllowUserToDeleteRows = false;
+            this.dgv_Usuarios.AutoGenerateColumns = false;
             this.dgv_Usuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.dgv_Usuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -91,6 +98,11 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_Usuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Usuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombreDataGridViewTextBoxColumn,
+            this.userDataGridViewTextBoxColumn,
+            this.passDataGridViewTextBoxColumn});
+            this.dgv_Usuarios.DataSource = this.adminBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -160,6 +172,31 @@
             this.lbl_User.TabIndex = 8;
             this.lbl_User.Text = "Usuario";
             // 
+            // adminBindingSource
+            // 
+            this.adminBindingSource.DataSource = typeof(TiposDeUsuarios.Admin);
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // userDataGridViewTextBoxColumn
+            // 
+            this.userDataGridViewTextBoxColumn.DataPropertyName = "User";
+            this.userDataGridViewTextBoxColumn.HeaderText = "Usuario";
+            this.userDataGridViewTextBoxColumn.Name = "userDataGridViewTextBoxColumn";
+            this.userDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // passDataGridViewTextBoxColumn
+            // 
+            this.passDataGridViewTextBoxColumn.DataPropertyName = "Pass";
+            this.passDataGridViewTextBoxColumn.HeaderText = "Contraseña";
+            this.passDataGridViewTextBoxColumn.Name = "passDataGridViewTextBoxColumn";
+            this.passDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // frm_AltaAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -179,6 +216,7 @@
             this.Name = "frm_AltaAdmin";
             this.Text = "AltaAdmin";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,5 +233,9 @@
         private Label lbl_Nombre;
         private Label lbl_Pass;
         private Label lbl_User;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn userDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn passDataGridViewTextBoxColumn;
+        private BindingSource adminBindingSource;
     }
 }

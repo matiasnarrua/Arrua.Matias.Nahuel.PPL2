@@ -24,25 +24,25 @@ namespace TiposDeUsuarios
             this.Nombre = nombre;
         }
 
-        public Materia(string nombre, string cuatrimestre, string profesor,string correlativa):this(nombre)
+        public Materia(string nombre, string profesor,string correlativa):this(nombre)
         {
-            _nombre = nombre;
-            _cuatrimestre = cuatrimestre;
+            _nombre = nombre;           
             _profesor = profesor;
             _materiaCorrelativa =correlativa;
         }
 
-        public string Nombre { get => _nombre; set => _nombre = value; }      
-        public string Cuatrimestre { get => _cuatrimestre; set => _cuatrimestre = value; }
+        public string Nombre { get => _nombre; set => _nombre = value; }             
         public string Profesor { get => _profesor; set => _profesor = value; }
        
         public string MateriaCorrelativa { get => _materiaCorrelativa; set => _materiaCorrelativa = value; }
 
 
-        public void CargarMateria(string nombre, string cuatrimestre, string correlativa)
+        public virtual void CargarMateria(string nombre, string cuatrimestre, string correlativa)
         {
-            Datos.listaMaterias.Add(new Materia(Datos.HacerPrimerLetraMayus(nombre), Datos.HacerPrimerLetraMayus(cuatrimestre), "-", Datos.HacerPrimerLetraMayus(correlativa)));
+            Datos.listaMaterias.Add(new Materia(Datos.HacerPrimerLetraMayus(nombre), "-", Datos.HacerPrimerLetraMayus(correlativa)));
         }
+        
+
 
     }
 }

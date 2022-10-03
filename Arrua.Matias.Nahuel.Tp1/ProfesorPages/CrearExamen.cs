@@ -24,26 +24,13 @@ namespace Arrua.Matias.Nahuel.Tp1.ProfesorPages
             
             BindingSource bs = new BindingSource();
             
-            bs.DataSource = TraerExamenDeSuMateria(profesor);
+            bs.DataSource = Datos.TraerExamenDeSuMateria(profesor);
             dgv_Examenes.DataSource = bs;
            
         }
 
 
-        public List<Examen> TraerExamenDeSuMateria(Profesor profesor)
-        {
-            List<Examen> listaExamenes = new List<Examen>();
-
-            foreach (Examen examen in Datos.listaExamenes)
-            {              
-                if (examen.Materia == profesor.MateriaAsignada)
-                {                    
-                    listaExamenes.Add(examen);
-                }
-            }
-            
-            return listaExamenes;
-        }
+        
 
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
@@ -54,7 +41,7 @@ namespace Arrua.Matias.Nahuel.Tp1.ProfesorPages
             Datos.listaExamenes.Add(examen);
             BindingSource bs = new BindingSource();
 
-            bs.DataSource = TraerExamenDeSuMateria(profesor1);
+            bs.DataSource = Datos.TraerExamenDeSuMateria(profesor1);
             dgv_Examenes.DataSource = bs;
 
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -41,7 +42,12 @@
             this.txt_PassProfesorAlta = new System.Windows.Forms.TextBox();
             this.txt_NombreProfesorAlta = new System.Windows.Forms.TextBox();
             this.dgv_Usuarios = new System.Windows.Forms.DataGridView();
+            this.profesorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Titulo
@@ -121,6 +127,10 @@
             // 
             // dgv_Usuarios
             // 
+            this.dgv_Usuarios.AllowUserToAddRows = false;
+            this.dgv_Usuarios.AllowUserToDeleteRows = false;
+            this.dgv_Usuarios.AllowUserToOrderColumns = true;
+            this.dgv_Usuarios.AutoGenerateColumns = false;
             this.dgv_Usuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.dgv_Usuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -132,6 +142,11 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_Usuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Usuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombreDataGridViewTextBoxColumn,
+            this.userDataGridViewTextBoxColumn,
+            this.passDataGridViewTextBoxColumn});
+            this.dgv_Usuarios.DataSource = this.profesorBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -143,6 +158,7 @@
             this.dgv_Usuarios.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgv_Usuarios.Location = new System.Drawing.Point(12, 69);
             this.dgv_Usuarios.Name = "dgv_Usuarios";
+            this.dgv_Usuarios.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -156,6 +172,31 @@
             this.dgv_Usuarios.RowTemplate.Height = 25;
             this.dgv_Usuarios.Size = new System.Drawing.Size(334, 300);
             this.dgv_Usuarios.TabIndex = 16;
+            // 
+            // profesorBindingSource
+            // 
+            this.profesorBindingSource.DataSource = typeof(TiposDeUsuarios.Profesor);
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // userDataGridViewTextBoxColumn
+            // 
+            this.userDataGridViewTextBoxColumn.DataPropertyName = "User";
+            this.userDataGridViewTextBoxColumn.HeaderText = "Usuario";
+            this.userDataGridViewTextBoxColumn.Name = "userDataGridViewTextBoxColumn";
+            this.userDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // passDataGridViewTextBoxColumn
+            // 
+            this.passDataGridViewTextBoxColumn.DataPropertyName = "Pass";
+            this.passDataGridViewTextBoxColumn.HeaderText = "Contraseña";
+            this.passDataGridViewTextBoxColumn.Name = "passDataGridViewTextBoxColumn";
+            this.passDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // frm_AltaProfesor
             // 
@@ -176,6 +217,7 @@
             this.Name = "frm_AltaProfesor";
             this.Text = "AltaProfesor";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,5 +234,9 @@
         private TextBox txt_PassProfesorAlta;
         private TextBox txt_NombreProfesorAlta;
         private DataGridView dgv_Usuarios;
+        private DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn userDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn passDataGridViewTextBoxColumn;
+        private BindingSource profesorBindingSource;
     }
 }

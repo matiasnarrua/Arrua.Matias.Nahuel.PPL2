@@ -37,8 +37,9 @@
             this.dgv_MateriasCursadas = new System.Windows.Forms.DataGridView();
             this.alumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.materiaCursadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nota1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nota2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExamenNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExamenNota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstadoMateria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDelAlumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_MateriasCursadas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).BeginInit();
@@ -62,8 +63,9 @@
             this.dgv_MateriasCursadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_MateriasCursadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.materiaCursadaDataGridViewTextBoxColumn,
-            this.nota1DataGridViewTextBoxColumn,
-            this.nota2DataGridViewTextBoxColumn,
+            this.ExamenNombre,
+            this.ExamenNota,
+            this.EstadoMateria,
             this.estadoDelAlumnoDataGridViewTextBoxColumn});
             this.dgv_MateriasCursadas.DataSource = this.alumnoBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -105,19 +107,26 @@
             this.materiaCursadaDataGridViewTextBoxColumn.Name = "materiaCursadaDataGridViewTextBoxColumn";
             this.materiaCursadaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // nota1DataGridViewTextBoxColumn
+            // ExamenNombre
             // 
-            this.nota1DataGridViewTextBoxColumn.DataPropertyName = "Nota1";
-            this.nota1DataGridViewTextBoxColumn.HeaderText = "Primer Nota";
-            this.nota1DataGridViewTextBoxColumn.Name = "nota1DataGridViewTextBoxColumn";
-            this.nota1DataGridViewTextBoxColumn.ReadOnly = true;
+            this.ExamenNombre.DataPropertyName = "ExamenNombre";
+            this.ExamenNombre.HeaderText = "Examen";
+            this.ExamenNombre.Name = "ExamenNombre";
+            this.ExamenNombre.ReadOnly = true;
             // 
-            // nota2DataGridViewTextBoxColumn
+            // ExamenNota
             // 
-            this.nota2DataGridViewTextBoxColumn.DataPropertyName = "Nota2";
-            this.nota2DataGridViewTextBoxColumn.HeaderText = "Segunda Nota";
-            this.nota2DataGridViewTextBoxColumn.Name = "nota2DataGridViewTextBoxColumn";
-            this.nota2DataGridViewTextBoxColumn.ReadOnly = true;
+            this.ExamenNota.DataPropertyName = "ExamenNota";
+            this.ExamenNota.HeaderText = "Calificacion";
+            this.ExamenNota.Name = "ExamenNota";
+            this.ExamenNota.ReadOnly = true;
+            // 
+            // EstadoMateria
+            // 
+            this.EstadoMateria.DataPropertyName = "EstadoMateria";
+            this.EstadoMateria.HeaderText = "EstadoMateria";
+            this.EstadoMateria.Name = "EstadoMateria";
+            this.EstadoMateria.ReadOnly = true;
             // 
             // estadoDelAlumnoDataGridViewTextBoxColumn
             // 
@@ -149,8 +158,9 @@
         private DataGridView dgv_MateriasCursadas;
         private BindingSource alumnoBindingSource;
         private DataGridViewTextBoxColumn materiaCursadaDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn nota1DataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn nota2DataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn ExamenNombre;
+        private DataGridViewTextBoxColumn ExamenNota;
+        private DataGridViewTextBoxColumn EstadoMateria;
         private DataGridViewTextBoxColumn estadoDelAlumnoDataGridViewTextBoxColumn;
     }
 }
