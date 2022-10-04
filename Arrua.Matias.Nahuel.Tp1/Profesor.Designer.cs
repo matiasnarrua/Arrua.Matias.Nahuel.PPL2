@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Profesor));
             this.pnl_Contenedor = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_CerrarUserProfesor = new System.Windows.Forms.Button();
@@ -280,6 +281,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Profesor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UTN Profesor";
