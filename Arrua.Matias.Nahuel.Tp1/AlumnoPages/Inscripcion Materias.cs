@@ -27,7 +27,6 @@ namespace Arrua.Matias.Nahuel.Tp1.AlumnoPages
         {
             this.alumno = alumno1;
 
-            // CargarCmbs(alumno);
             CargarCmbs();
         }
 

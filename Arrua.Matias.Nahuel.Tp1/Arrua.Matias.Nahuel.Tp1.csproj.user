@@ -13,6 +13,9 @@
     <Compile Update="AdminPages\AltaProfesor.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="AdminPages\AsignarMateria.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="AdminPages\AsignarProfesor.cs">
       <SubType>Form</SubType>
     </Compile>

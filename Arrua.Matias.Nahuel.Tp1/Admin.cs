@@ -100,9 +100,13 @@ namespace Arrua.Matias.Nahuel.Tp1
             frm_Login log = new frm_Login();
             log.ShowDialog();
         }
-        #endregion
-
-
-
+        private void btn_AsignarMateriaAlumno_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new frm_AsignarMateria());
+        }
     }
+
+    #endregion
+
+
 }
